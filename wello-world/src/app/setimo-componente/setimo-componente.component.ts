@@ -5,11 +5,4 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './setimo-componente.component.html',
   styleUrls: ['./setimo-componente.component.css']
 })
-export class SetimoComponenteComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class SetimoComponenteComponent {}

@@ -161,9 +161,12 @@ aula 03
 
 					o angular cra uma interface
 						on init, e algumas coisas dentro da classe
-						por enquanto isos nao vai ser preciso. Apagar.
+						por enquanto isos nao vai ser preciso. Apagar. 
 
-
+===============================================================================
+aula 04
+=========
+	typescript
 
 
 
