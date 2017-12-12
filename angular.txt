@@ -247,7 +247,8 @@ aula 05
 						o botstrao aaponta qual é o componente "inicial", "principal" da aplicação
 							é nesse componente q se configura as rotas 
 							declara ou chama o menu da app 
-			O angular trabalha com criação de modulos pq seficassemos declarando tudo nesse modulo ele ficaria enorme
+			O angular trabalha com criação de modulos pq seficassemos declarando tudo nesse modulo 
+				ele ficaria enorme
 			os novos modulos sao chamados de features modules (modulos de funcinaliodades)
 			para criar um modulo é via bash
 			ng g m nome-do-modulo
@@ -258,10 +259,10 @@ aula 05
 				ele contem as diretivas e os pipes mais comuns
 				Assim todas essas diretivas e pipes ficam disponives no modulo q estamos criando
 
-			depois ela cria im componente para utilizamor no modulo novo
+			depois ela cria im componente para utilizamos no modulo novo
 			vai na pasta em criamos o modulo e da um:
-			ng g c cursos 
-			cria a pasta cursos com os arquivos do modulo e atualizou o modulo raiz
+			ng g c nomme-componente 
+			cria a pasta do domponente com os arquivos do modulo e atualizou o modulo raiz
 				lembrar de apagar a interface e as execuções dentro da classe
 			nao queremos o cursosComopent declarado no modulo raiz, e sim no feature module
 				apagamos do app.module
@@ -284,6 +285,18 @@ aula 05
 						o angular ja add o componente novo ao modulo
 						mas e quisermos  q o template do componente detalhe seja visivel pela wiew do projeto, tessmo q colocar ele no exports 
 							assim trabalhamos a ideia de componentes privados e componentes publicos
+
+				bna verdade, qd criamos um modulo e um componente, o que aocntece é o seguinte:
+					o componente e o modulo novo tem o mesmo comportamento q componentes quaisquer e o app.module
+					tipo, quando criamos apenas um componente, avisamos o app module
+					quando criamos um modulo novo, e um componente	
+						1 - avisamos o modulo novo da existencia do componente
+						2 - avisamos o app module do modulo novo
+						lembrar:
+							no modulo novo definimos se os componntes sao publicos ou privados
+							lá no exports	
+							se colocarmos no exports, o componente fica publico
+							se deixarmos apenas no declarations, fica privado
 
 
 
