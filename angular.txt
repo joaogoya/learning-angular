@@ -214,6 +214,84 @@ aula 04
 ===============================================================================
 aula 05
 =========
+	Modulos
+	qd agente cria um projeto com angular, ele ja cria um modulo. O app.modules
+		esse é o modulo raiz da aplicação.
+		ela apresenta o moudulo
+			no final tem o export class
+			depois da class, vem o decorator
+				@alguma-coisa
+				como é um decorator, tem q ter o import dele la no topo
+				todos os decorators vem do @angular/core
+			alem do decorator, tem outros Modulos  
+				cada um tem uma função, e é importado de algum lugar
+				nao necessariamente o @angular/core
+					browser module - prepara a app p ser rodade em browser
+					formsModule - ele é importante p databing e trabalhar com formularios
+					http module - utilizado p fazer as requisições ajax
+					Com o nivel de codigo q vamos trabalhar no inicio do curso, da p tirar o http module e o forms module, comentando as linhas
+			Depois vem os metadados dentro do decorator
+				declarations
+					aqui declaramos toso os componentes, diretivas e pipes q vamos utilizar nesse modulo 
+				imports:
+					outros modulos que agente quer utilizar nesse modulo aqui
+					por exemplo, se agente fizerm um import de algum modulo la em cima (tipo htpp), a gente precisa declarar o modulo aqui no metadados, atraves do import
+				Providers
+					é onde vao os serviços
+					assim os serviços ficam disponiveis para os componentes declarados no modulo
+				bootstrap
+					existe apenas no mudolo raiz da app
+					bootstrap á o componente que vai servisr de container para outros.
+						o angular trabalha com SPA	
+							single page aplication
+						o botstrao aaponta qual é o componente "inicial", "principal" da aplicação
+							é nesse componente q se configura as rotas 
+							declara ou chama o menu da app 
+			O angular trabalha com criação de modulos pq seficassemos declarando tudo nesse modulo ele ficaria enorme
+			os novos modulos sao chamados de features modules (modulos de funcinaliodades)
+			para criar um modulo é via bash
+			ng g m nome-do-modulo
+			ng g m cursos
+			
+			depois ela apresenta as difrenças entre o modulo raiz e um feature modulo
+				existem varas diferenças, mas oq importa é o CONMOM modules que o fetare modulo importa
+				ele contem as diretivas e os pipes mais comuns
+				Assim todas essas diretivas e pipes ficam disponives no modulo q estamos criando
+
+			depois ela cria im componente para utilizamor no modulo novo
+			vai na pasta em criamos o modulo e da um:
+			ng g c cursos 
+			cria a pasta cursos com os arquivos do modulo e atualizou o modulo raiz
+				lembrar de apagar a interface e as execuções dentro da classe
+			nao queremos o cursosComopent declarado no modulo raiz, e sim no feature module
+				apagamos do app.module
+					apaga no import la em cima e no declarations
+
+				depois temos que colocar o template criado na wiew do projeto
+					primeiro passo: pega o nome do template na classe (selector)
+					coloca na wiew do projeto
+					atualiza
+					vai dar ban, pq o templete ta na pasta q contem o modulo e o componente
+					a wiwe do projeto ano encherga
+					pra isso fazemos o seguinte
+						no feature module damos um export para q a aplicação veja o modulo q esta na pasta 
+					depois de exportar, precisamos ir no modulo raiz e importar o modulo q estamos criando.
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
