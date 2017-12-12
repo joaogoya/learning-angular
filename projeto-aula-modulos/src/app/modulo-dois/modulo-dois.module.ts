@@ -7,6 +7,6 @@ import { ModuloDoisComponent } from './modulo-dois.component';
     CommonModule
   ],
   declarations: [ModuloDoisComponent],
-  exports:[ModuloDoisComponent],
+  exports:[ModuloDoisComponent]
 })
 export class ModuloDoisModule { }

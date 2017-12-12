@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 
 import { ModuloUmModule } from './modulo-um/modulo-um/modulo-um.module';
 import { ModuloDoisModule } from './modulo-dois/modulo-dois.module';
+import { ModuloTresModule } from './modulo-tres/modulo-tres.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { ModuloDoisModule } from './modulo-dois/modulo-dois.module';
   imports: [
     BrowserModule,
     ModuloUmModule,
-    ModuloDoisModule 
+    ModuloDoisModule, 
+    ModuloTresModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
