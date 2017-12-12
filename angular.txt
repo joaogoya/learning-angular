@@ -1,0 +1,190 @@
+===============================================================================
+aula 01
+=========
+
+	apresentação
+	
+	componentes e templates
+	data binding
+	diretivas e serviços
+	formularios
+	roteamentos
+	integração com servidor
+	crud
+	
+	angular.io - documentação
+	parceria google e microsoft
+		google mantem, mas foi escrito em typescript(ms)
+	
+	open source
+		github.com/angular
+		
+	overview
+		compnente:
+			é a view
+			encapsula
+				templates
+				metadata - processamento de classes
+				dado a ser mostrado na tela - databinding
+				comportamento da view
+				
+			angular 2 é oriantado a componetes
+				um componente pode ser divido em componetnte menores
+					um componete de lista de posts pode ser dividido em varios posts, onde cada post é um componente	
+					"quebrar" as coias em componentes faz com que fique ais facil de testar.
+
+		Serviçoes
+			Um componente pode se comunicar com o back end.
+			qq linguagem. php, C#, c++,...
+			o componete (front) pode falar com o back
+			nao é boa pretica colocar regras de negocio nos componentes
+			para isso existem os SERVIÇOS. São eles que fazem o meio campo entre p front e o back. É ali que ficam as regras de negocio
+			Os servços tb podem ser injetados em outras classes, para isso se usa a INJEÇÃO DE DEPENDENCIAS do angular. Vai ter uma aula só p isso
+			
+		Router:
+			Uma aplicação tem varias paginas
+			o angular trabalha com o conceito de SPA - Single page aplication
+			Uma pagina pode ter telas diferentes
+			O router faz a navegação entre uma tela e outras
+			
+		Diretivas:
+			Manipula o DOM
+			os componentes tb manipula o dom, mas nao foram feitos p isso
+			a diretiva sim.
+		
+	Repositorio do curso:
+		github.com/loiane/curso-angular2
+		Loiane.training
+		
+
+
+
+===============================================================================
+aula 02
+=========
+	ambiente
+	
+	instalar o node
+		tem q instalar pe nesse ponto é tipo grunt
+		o angular trabalha com dependencias, e grunt com plugins
+		
+	no prompt/bash instalat o angular-cli
+		provavelmente na pasta do projeto
+		depois do angular-cli, é que chamamos as dependencias
+		tem que ter um packdge json
+		
+	instalar typescript	
+		depois de instalar o node
+		npm install -g typescript 
+		
+		pq typescript e nao o js puto
+			è possivel utilizar o ECMAscrpit2015, porem a maioria dos exemplos, a proria dpcumentação estão em typescrit
+			o proprio angular foi escrito em typescript
+	
+	Instalar o angular@cli
+		npm install -g@angular/cli	
+			antenção, pq é barra no final, e nao hifem
+			
+		github.com/angular/angular-cli
+		
+		
+	e tb vai precisar de editor de texto 
+		sublime, notepad++, vs code,....
+			vs code ja suporta typescripot (ts)
+			sublime - tem plugins
+			
+			vs code	
+				dar um scrool q tem as base, depois dos plugins
+				https://code.visualstudio.com/docs?start=true
+				
+				https://code.visualstudio.com/docs/getstarted/introvideos 	 	
+		
+		
+		
+===============================================================================
+aula 03
+=========		
+	primeiras aplicações
+	no bash, dar um ng new nome-da-pasta
+		o angular cria a pasta do projeto, com todos os componentes e todas as dependencias
+		Sobre o nome da pasta:
+			nao pode ter underline na frente, tem q ser uma letra
+			tipo, _projeto01 ta errado, tem underline
+		
+		ela tem uma aula que explica o qq é cada arquivo que o angular cria 
+			é aula 21
+
+		vamos trabalhar em src/app 
+
+		antes de inciar, vamos ver o que está sendo exibido no browser
+			vai no bash, pasta q o angular criou, e da um ng serve
+			assim o angular vai da um build no projeto e gera uma url pra acessar via browsar
+
+		saida do dado do componente para a wiew se chama interpolação
+			no componete tem um titlt = lorem
+			na wiew tem um {{title}}
+			Isso é uma interpolação
+
+		criar novo componete:
+			primeiro vai ser manualmente, para termos um passo a passo.
+			mas tem como fazer via angular
+			o passo a passo tb serve pra gente ser apresentado as boas praticas e patrodes de projeto do angular
+
+
+			Manual, passo a passo:
+				vai na pasta do projeto, em src/app cria uma nova pasta - primeiro-componente
+				separado por hifen
+				dentro da pasta cria um file
+				meu-primeiro.component.ts
+				dentro desse file:
+					criamos a calsse primiroCompnent{}
+					dai precisamos avisar o compilador q a classe é um componente
+						@Component({})
+						mas precismos importar a classe q permite usar o @component
+						pra isso importa da biblioteca q o angular instalou no projeto (node modules)
+						import {Component} from ´@angular/core´ 
+						depois, precisamos passar os metadados, dentro do @component({
+							metadados aqui
+							selector e template
+						})
+						precisamos exportar a classe, para aplicação enxergar
+
+				depois precisamos avisar a aplicação ad existencia dessa classe	
+					no arquivo app.modules, no @moudules passamos a classe
+					depois, la em cima, damos um import na classe.
+
+
+
+					
+
+			via bash, angular cli:
+				ctrl+c p parar o ng serve
+				ng g c nome do componente 
+					onde a letra G é para gerar e a letra C é pra ser um componente 
+					ng g c segundo-componente 
+
+					o angular cra uma interface
+						on init, e algumas coisas dentro da classe
+						por enquanto isos nao vai ser preciso. Apagar.
+
+
+
+
+
+
+		
+		
+		
+	
+
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
