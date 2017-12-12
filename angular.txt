@@ -276,8 +276,14 @@ aula 05
 					pra isso fazemos o seguinte
 						no feature module damos um export para q a aplicação veja o modulo q esta na pasta 
 					depois de exportar, precisamos ir no modulo raiz e importar o modulo q estamos criando.
+						lembrar q no raiz, importamos o MODULO NOVO, e nao o componente novo
 
-				
+					o selector de um componente nao precisa ser escrito apenas na wiew do projeto
+					se o projeto tem 5 componentes, eu posso pegar o seletor do componente 4 e escrever dentoro do template de outro componente.
+					se dentro da pasta do componente 3, criarmos um componente, o componente-detalhe:
+						o angular ja add o componente novo ao modulo
+						mas e quisermos  q o template do componente detalhe seja visivel pela wiew do projeto, tessmo q colocar ele no exports 
+							assim trabalhamos a ideia de componentes privados e componentes publicos
 
 
 

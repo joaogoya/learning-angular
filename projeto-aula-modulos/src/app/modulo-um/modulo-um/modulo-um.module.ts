@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ModuloUmComponent } from './modulo-um/modulo-um.component';
+
+
+import { ModuloUmComponent } from './modulo-um.component';
 
 
 @NgModule({
@@ -11,7 +13,7 @@ import { ModuloUmComponent } from './modulo-um/modulo-um.component';
     ModuloUmComponent,
   ],
   exports: [
-    ModuloUmComponent, 
+    ModuloUmComponent
   ],
 })
 export class ModuloUmModule { }
