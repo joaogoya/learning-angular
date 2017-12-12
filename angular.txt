@@ -167,6 +167,59 @@ aula 03
 aula 04
 =========
 	typescript
+	cria uma pasta na pasta src/app
+	dentro dessa pasta cria um file .ts
+		criar codigos em js e comparar com ECMA e TS
+
+		via bash, vai na pasta que foi criada, no caso aqui, é a pasta primeiro-typescript e da um tsc main.ts
+		isso faz o ts compilar o arquivo 
+		um arquivo .js é criado
+
+		ela recomenda o site es6-features.org
+
+		apresenta variaveis
+		apresenta uma function norml
+		apresenta uma arrow function, que é ECMA
+			apaga apalavra function, fica o valor e uma seta
+			numeros.map(valor =>)
+			depois vem o que a function executa
+			numeros.map(valor => {do sonthing;})
+			quando o bloco de execução for só uma linha, nao precisa das chaves, nem do ponto e virgula dento delas, só o de fra do parenteses
+			numeros.map(valor => do sonthing);
+			tb nao precisa o retrn
+			Para trabalhar com a ECMA precisa de um transpiler
+				uns dos transpilers mais populares que existem é o babel
+				mas o ts tem um transpiler nativo
+				ele gera js nativo apartir do ECMA qd o ts compila
+			com ECMA fica mais simples de declarr clasees, por exemplo.
+				compila e o ts gera todo o codigo para a classe ter a sintaxe de js nativo
+
+		ela explica pq o ts é melhor que o babel p transpilar
+			1 - o babel ainda nao transpila decoratos, o ts ja
+			2 - com ts temos como tipar as variaveis	
+				o js nativo nao trabalha com tipos de dados
+				tipo, criamos uma var numer = 4.
+				com js nativo podemos escrever: numero = "lorem";
+				um int estaria recebendo uma string
+				de novo, com js nativo da. Ele nao trabalha com tipagem de dados.
+				Mas com ts podemos tipar, e trabalhar com tipos e dados diferentes.
+				Com babel tb nao da para trablahr com tipos de dados
+		Ela recomenda olhar o curso de java basico, a parte de orientação aobjetos
+			classes e atributos
+			modificadores proivate 
+			getters e setters 
+			variaveis e metodos estaticos
+			interfaces
+
+===============================================================================
+aula 05
+=========
+
+
+
+
+
+
 
 
 
