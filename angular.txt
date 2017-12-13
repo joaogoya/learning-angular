@@ -342,9 +342,6 @@ aula 07
 			da pra pegar as listas do luan p treinar
 			fazer alguns para fixar
 
-
-
-
 	para criar uma classe de servico:
 		pode serna mao
 			create file, .......
@@ -399,12 +396,34 @@ aula 07
 				fazer algumas vezes para fixar
 
 				
+===============================================================================
+aula 08
+=========
+	plugins
 
+===============================================================================
+aula 09
+=========
+	property binding	
+	no projeto 6
+	<img src={{ url }} - interpolação
+	<img [src]=url - property binding
+		é uma meniera mais pratica de colocar variavel nas propriedades html
 
+===============================================================================
+aula 09
+=========
+	class e style binding
+		sao maneiras de serabalhar com databinding 
+			da p usar p manipular o dom por exemplo.
+		
+		tipo, o databidinng nao servo só p tratar variaveis
+		é um recurso
+		e pode ser utilizado de varias maneiras
+		p isso criei um componente no projeto 6, o func 3
 
-
-
-
+		ela tb mostra como importar o bootstrap pro angular
+	
 
 
 

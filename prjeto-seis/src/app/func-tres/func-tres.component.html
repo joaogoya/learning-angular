@@ -1,0 +1,29 @@
+<p>
+  func-tres works!
+</p>
+
+
+<article>
+    <h3>Select box</h3>
+    <div>
+      <select #lorem (change)="0">
+        <option value="red">1</option>
+        <option value="blue">2</option>
+        <option value="green">3</option>
+        <option value="orange">4</option>
+      </select>
+    </div>
+  </article>
+
+
+<div class="box" [class.red]="lorem.value == 'red'" ></div>
+<div class="box" [class.blue]="lorem.value == 'blue'"></div>
+<div class="box" [class.green]="lorem.value == 'green'"></div>
+<div class="box" [class.orange]="lorem.value == 'orange'"></div>
+
+<br><br><br>
+
+<div class="box {{ lorem.value }}">
+  interpolação - azul - 2
+</div>
+
