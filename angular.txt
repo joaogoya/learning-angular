@@ -434,6 +434,7 @@ aula 11
 	segui no projeto 6, pq pelo visto a aula 11 é continuação da 9 e 10
 	no prpperty binding se usa colchetes - [srcr]
 	no event binding se usa parenteses - (click)
+	
 
 
 
