@@ -286,7 +286,7 @@ aula 05
 						mas e quisermos  q o template do componente detalhe seja visivel pela wiew do projeto, tessmo q colocar ele no exports 
 							assim trabalhamos a ideia de componentes privados e componentes publicos
 
-				bna verdade, qd criamos um modulo e um componente, o que aocntece é o seguinte:
+				na verdade, qd criamos um modulo e um componente, o que aocntece é o seguinte:
 					o componente e o modulo novo tem o mesmo comportamento q componentes quaisquer e o app.module
 					tipo, quando criamos apenas um componente, avisamos o app module
 					quando criamos um modulo novo, e um componente	
@@ -375,6 +375,11 @@ aula 07
 			O ban q pode dar é q alem de instanciarmos a classe de serviço, 
 			tb teriamos q instanciar o http 
 			o httm é um objeto do angular
+
+			No componente:
+				importa a classe la em cime
+				cria uma instancia da classe de servico no construtor
+				dentro do construtor trabalha chamando os metodos da classe de servico
 
 			outra é via injeção de dependencias
 				injeção de dependencia é fazer o angular instanciar autometicamente a classe p nos
