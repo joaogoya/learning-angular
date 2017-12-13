@@ -411,7 +411,7 @@ aula 09
 		é uma meniera mais pratica de colocar variavel nas propriedades html
 
 ===============================================================================
-aula 09
+aula 10
 =========
 	class e style binding
 		sao maneiras de serabalhar com databinding 
@@ -423,9 +423,17 @@ aula 09
 		p isso criei um componente no projeto 6, o func 3
 
 		ela tb mostra como importar o bootstrap pro angular
+
+		é a aula do select com bg colorido - projeto 6
 	
 
-
+===============================================================================
+aula 11
+=========
+	event binding
+	segui no projeto 6, pq pelo visto a aula 11 é continuação da 9 e 10
+	no prpperty binding se usa colchetes - [srcr]
+	no event binding se usa parenteses - (click)
 
 
 
