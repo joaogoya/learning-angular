@@ -14,7 +14,7 @@ export class ComponenteSolto01Component {
 
   constructor(private servico: ServicoUmService) {
       this.nome = "Apenas uma string";
-
+      
       /*assim é um for normal, mas da pra fazer no template, com uma diretiva
       for( let i = 0; i <= this.cursos.length; i++){
           let curso = this.cursos[i];

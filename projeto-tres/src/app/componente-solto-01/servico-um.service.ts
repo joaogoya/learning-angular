@@ -9,9 +9,7 @@ export class ServicoUmService {
     return ['lorem', 'imspum', 'dolor', 'teste', 'aaaaa', 'vãobvua'];
   }
 
-
   metodoTeste(a, b){
     return a + b;
   }
-
 }
