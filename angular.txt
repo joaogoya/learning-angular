@@ -320,6 +320,89 @@ aula 06
 		smais do q isso ´reconedado q se crie um template e ponte no conmponente
 
 
+===============================================================================
+aula 07
+=========
+	Injeções e dependencias
+
+	Serviços:
+		nao é boa pratica colocar as requisições e "comunicaççao" com o servidor no componente.
+		no componente colocamos apenas o q os usuarios podem ter acesso
+		para comunicar com servidor criamos uma classe de serviço
+		vou criar serviços no projeto tres pra nao ter q criar outro projeto
+
+	me parece que é onde começa a pegar a orientação
+		um serviço parece uma model
+		ela que busca as informações
+		o componente trata - controler
+		e a wiew exibe - wiew
+
+		Na real isso pode ser relacionado até com uma strucut
+			ali ficam as infos 
+			da pra pegar as listas do luan p treinar
+			fazer alguns para fixar
+
+
+
+
+	para criar uma classe de servico:
+		pode serna mao
+			create file, .......
+			depois do arquivo criado, colocar o "esqueleto"
+				imports, classe, metodo, .....
+		pode ser via terminal
+			o angular cli ja cria o esqueleto
+
+		fazer alguns via terminal p fixar o passo a passo e a logica, 
+		mas depois fazeer uns na mao p fixar os imports e estrutura do arquivo
+
+		Fazer via bash:
+			ng g s nome-do-servico	
+				se fizermos assim o angular cli cria o serviço na pas app
+				nao é o melhor nogocio
+				o bom é criar na pasta do componente
+				entao fazemos:
+			ng g s nome-pasta-componente/nome-servico
+			vou trabalhar no componente solto, pq ja tem o tratamento de algumas informações e tb tem interações com a wiew
+			o angular cli cria dois arquivos
+				um de teste
+				e o outro, que é a classe de serviço
+
+	existem duas maneiras de se chamar (instanciar na real) as classes de serviços qd estamos no componente.
+	Uma é a manual, mas pode dar ban com http	
+		ver como é a norml, e qual é o ban
+		se der, fazer lagumas vezes para fixar
+			O ban q pode dar é q alem de instanciarmos a classe de serviço, 
+			tb teriamos q instanciar o http 
+			o httm é um objeto do angular
+
+			outra é via injeção de dependencias
+				injeção de dependencia é fazer o angular instanciar autometicamente a classe p nos
+				assim ele lida com o http
+				assim agente utiliza a instancia, se ter que instanciar
+				no angular agente faz isso com o decorator @injectable()
+					assim nos fazemos com que a classe de servico seja "injetada" em outra
+				no angular se trabalha com injeção de dependencia no construttor
+
+				alem de fazer a injeção no serviço e no construtor,
+				tb precisamos avisar o modulo da classe de serviço
+					avisar q ela é um provider
+					como a pasta componente solto nao tem modulo,
+					botei no app module
+
+				ver como é
+				fazer algumas vezes para fixar
+
+				
+
+
+
+
+
+
+
+
+
 
 
 
