@@ -299,6 +299,30 @@ aula 05
 							se deixarmos apenas no declarations, fica privado
 
 
+===============================================================================
+aula 06
+=========
+	templates/wiews
+
+	explica o q é templates
+	fala dos seletores q podem ser criados nos metofdos
+
+	aula de templates vou fazer no projeto transpilers
+		tem modulos, componente solto e modulo detalhe
+		no componente solto mais especificamente
+
+
+		como faz p passar variavel p template - interpolação
+
+		o angular cria um template html e aponta no componente,
+		mas tb da pra criar templates no componente, com as crases.
+		tem se como boas praticas trabalhar com templates inline (no componente) se o HTML tiver no maximo 3 linha
+		smais do q isso ´reconedado q se crie um template e ponte no conmponente
+
+
+
+
+
 
 
 
