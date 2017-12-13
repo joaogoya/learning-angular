@@ -39,6 +39,18 @@
 <textarea cols="30" rows="10">
   {{ valorAtual }}
 </textarea>
+
+<br><br><br>
+
+<span 
+  (mouseover) = "MouseOver()"
+  (onMouseOut) = "MouseOut()"
+  [class.red]="mo"
+  >
+  OVER - {{ texto }}
+
+</span>
+
 </article>
 
 

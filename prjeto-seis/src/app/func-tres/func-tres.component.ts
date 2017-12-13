@@ -21,6 +21,19 @@ export class FuncTresComponent implements OnInit {
 
   }
 
+  texto:string = 'out';
+  mo:boolean = false;
+  MouseOver(){
+    
+    this.mo = !this.mo;
+    if(this.mo == true){
+      this.texto = "over"; 
+    }
+    else{
+      this.texto = 'out';
+    }
+  }
+
   ngOnInit() {
   }
 
