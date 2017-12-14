@@ -1,0 +1,41 @@
+<br><br>
+<div>
+  <h1>Carro</h1>
+  <!-- 
+    na raiz dos projetos, a pasta angular tem um txt chmado angular
+    a partir da linha 482 tem uma especie de leia-me deste projeto
+   -->
+   <div id="roda" class="container">
+    <h1>roda</h1>
+    <div class="left">
+        <h3> Preencha </h3>
+        <input type="text" id="aro" placeholder="aro" value="a">
+        <input type="text" id="fabricante" placeholder="fabricante" value="a">
+        <input type="text" id="cor" placeholder="cor" value="c">
+        <br> <br>
+        <button (click)="salvarRoda()" >Salvar</button>
+    </div>
+
+    <div class="right">
+      <h3>Infos roda</h3>
+        <ul>
+          <li>{{ roda.aro }} </li>
+          <li>{{ roda.fabricante }}</li>
+          <li>{{ roda. cor }}</li>
+        </ul>
+    </div>
+    <p class="clear"></p>
+   </div>
+
+   <roda [roda] = "infosRoda"></roda>
+   
+</div>
+
+
+
+
+
+
+
+
+

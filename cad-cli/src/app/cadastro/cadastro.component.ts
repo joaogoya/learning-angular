@@ -62,11 +62,6 @@ export class CadastroComponent implements OnInit {
     Esta informação está sendo setada no cad-cli e printada no html do componente reuso.
   */
   infoTeste:string = "Apenas um teste sfegasrh";
-
-  
-
-
-
   constructor() {}
   ngOnInit() {}
 

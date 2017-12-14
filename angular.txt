@@ -480,6 +480,9 @@ aula 13
 		e assim sucessivamente
 
 	pra praticar isso vou criar o projeto carro
+		as informações de roda estão todas no mesmo componente.
+
+		
 		
 
 

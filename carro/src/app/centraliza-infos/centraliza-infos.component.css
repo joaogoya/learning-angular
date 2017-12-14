@@ -1,0 +1,7 @@
+div{
+    width: 80%; margin: auto; border: 1px solid #000; padding: 20px;
+}
+.clear{clear: both;}
+.left{width: 45%; float: left;}
+.right{width: 45%; float: right;}
+.container{background: #eee; width: 98%;}
