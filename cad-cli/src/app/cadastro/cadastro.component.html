@@ -2,21 +2,58 @@
 <br>
 
 <div>
-  <h1>Informe o nome</h1>
-  <input id="Text1" type="text" placeholder="nome"  />
+  <h1>propriety bindig</h1>
+  <input id="Text1" type="text" [value]=nome1  />
 </div>
 
 <div>
-  <h1>Informe o telefone</h1>
-  <input type="text" placeholder="telefone"/>
+  <h1>event biding</h1>
+  <input type="text" placeholder="telefone" (input)="nome1 = $event.target.value"/>
+  <span>{{ nome1 }}</span>
 </div>
 
-<br class="clear">
+<div>
+  <h1>two away databinding</h1>
+  <h2>exemplo 01</h2>
+  <input 
+    type="text" 
+    [ngModel]="nome2"
+    (ngModelChange)="nome2 = $event"
+    />
+    <br>
+    <p> {{ nome2 }} </p>
+  <br><br>
+
+  <h2>Exemplo 2</h2>
+  <input 
+    type="text" 
+    [(ngModel)] ="nome3"
+  />
+  <br>
+  <p> {{ nome3 }} </p>
+  <br><br>
+
+  
+  <h2>Exemplo 3 - Com objetos</h2>
+  <input 
+    type="text" 
+    [(ngModel)] ="pessoa.nome"
+  />
+  <br>
+  <p> {{ pessoa.nome }} </p>
+
+  <input 
+  type="text" 
+  [(ngModel)] ="pessoa.telefone"
+/>
 <br>
-<button (click)="capturaElemento()">Enviar</button>
-<br>
-<p>
-  {{ 5 - contador }}
-</p>
+<p> {{ pessoa.telefone }} </p>
+  <br><br>
+  
+
+
+
+</div>
+
 
 

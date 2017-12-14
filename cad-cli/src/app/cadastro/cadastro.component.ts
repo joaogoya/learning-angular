@@ -1,4 +1,5 @@
 import { AppComponent } from './../../../../projeto-aula-modulos/src/app/app.component';
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,20 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  nomes: string[];
-  telefones: number[];
-  contador: number = 0;
+  nome1: string = "Lorem";
+  nome2: string = "ddd";
+  nome3: string = "ggg";
 
-  constructor() { }
+  pessoa = {
+    nome: "aaaaa",
+    telefone: "33333",
 
-  v ;
-    capturaElemento(){
-      this.v = document.getElementById("Text1").value;
-      console.log(this.v);
-      this.v = "";
-      this.contador++;
-    }
-  ngOnInit() {
   }
+   
+  constructor() {}
+
+  ngOnInit() {}
 
 }

@@ -434,7 +434,34 @@ aula 11
 	segui no projeto 6, pq pelo visto a aula 11 é continuação da 9 e 10
 	no prpperty binding se usa colchetes - [srcr]
 	no event binding se usa parenteses - (click)
+
+	o property é usando para mandarinformações do domponente para o template
+	o event é usado para mandar informaççoes do template para o componente
+
+	e na aula 12 ela apresenta o two away data binding
+		faz as duas coias ao mesmo tempo
+		vai do template pro componente e do componente pro template
+		essa aula fiz no cad-cli
 	
+
+===============================================================================
+aula 12
+=========
+
+	two away data binding
+	pra trabalhar com ngModel tem q importar o FormsModule no app module
+		import { FormsModule } from '@angular/forms';
+
+				[...]
+
+				@NgModule({
+				imports: [
+					[...]
+					FormsModule
+				],
+				[...]
+				})
+
 
 
 
