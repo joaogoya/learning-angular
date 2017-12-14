@@ -19,7 +19,6 @@ export class CentralizaInfosComponent implements OnInit {
    this.roda.aro = (<HTMLInputElement>document.getElementById('aro')).value;
    this.roda.fabricante = (<HTMLInputElement>document.getElementById('fabricante')).value;
    this.roda.cor = (<HTMLInputElement>document.getElementById('cor')).value;
-   return this.roda;
  }
 
  infosRoda = "aaaaaaaa";
