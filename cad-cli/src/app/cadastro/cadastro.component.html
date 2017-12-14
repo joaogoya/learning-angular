@@ -33,7 +33,7 @@
   <p> {{ nome3 }} </p>
   <br><br>
 
-  
+
   <h2>Exemplo 3 - Com objetos</h2>
   <input 
     type="text" 
@@ -49,10 +49,15 @@
 <br>
 <p> {{ pessoa.telefone }} </p>
   <br><br>
-  
 
 
-
+  <h2>Exemplo 4 - Com metodo</h2>
+  <input 
+    type="text" [value] ="pessoa.nome"
+  />
+  <br>
+  <button (click) = "alertaTeste()"> OK </button>
+<br>
 </div>
 
 

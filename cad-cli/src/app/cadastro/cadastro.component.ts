@@ -16,9 +16,15 @@ export class CadastroComponent implements OnInit {
   pessoa = {
     nome: "aaaaa",
     telefone: "33333",
-
   }
-   
+
+  alertaTeste(){
+    //alert('teste');
+    this.pessoa.nome = " ";
+    console.log('Pessoa.nome'+this.pessoa.nome);
+    return this.pessoa.nome;
+  }
+  
   constructor() {}
 
   ngOnInit() {}
