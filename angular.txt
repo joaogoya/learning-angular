@@ -311,7 +311,6 @@ aula 06
 		tem modulos, componente solto e modulo detalhe
 		no componente solto mais especificamente
 
-
 		como faz p passar variavel p template - interpolação
 
 		o angular cria um template html e aponta no componente,
@@ -350,8 +349,7 @@ aula 07
 		pode ser via terminal
 			o angular cli ja cria o esqueleto
 
-		fazer alguns via terminal p fixar o passo a passo e a logica, 
-		mas depois fazeer uns na mao p fixar os imports e estrutura do arquivo
+		fazer alguns via terminal p fixar o passo a passo e a logica
 
 		Fazer via bash:
 			ng g s nome-do-servico	
@@ -464,7 +462,10 @@ aula 12
 
 
 
-
+===============================================================================
+aula 13
+=========
+	reutilização de componentes
 
 
 

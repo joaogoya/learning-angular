@@ -1,6 +1,4 @@
-
 <br>
-
 <div>
   <h1>propriety bindig</h1>
   <input id="Text1" type="text" [value]=nome1  />
@@ -32,8 +30,7 @@
   <br>
   <p> {{ nome3 }} </p>
   <br><br>
-
-
+  
   <h2>Exemplo 3 - Com objetos</h2>
   <input 
     type="text" 
@@ -50,15 +47,60 @@
 <p> {{ pessoa.telefone }} </p>
   <br><br>
 
-
   <h2>Exemplo 4 - Com metodo</h2>
   <input 
-    type="text" [value] ="pessoa.nome"
+    type="text" id="mytext" [value] ="pessoa.nome"
   />
   <br>
+  <p> {{ pessoa.nome }} </p>
   <button (click) = "alertaTeste()"> OK </button>
 <br>
 </div>
+
+<div>
+  <h1>Jogando em um vetor só com componente </h1>
+  <input type="text" id="infoVetor" placeholder="telefone"/><br>
+  <button (click)="populaVetor()" > OK </button>
+  <h5>vetor:</h5>
+  <ul>
+    <li *ngFor="let info of infos">
+        {{ info }}
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h1>Jogando em um vetor com classe de servico </h1>
+  <input type="text" id="infoVetor2"/><br>
+  <button (click)="populaVetor2()" > OK </button>
+  <h5>vetor:</h5>
+  <ul>
+    <li *ngFor="let frgt of infos2">
+        {{ frgt }}
+    </li>
+  </ul> 
+</div>
+<div>
+  <h1>Popula vetor e imprime vetor</h1>
+  
+  <div>
+    <h4>Popula Vetor</h4>
+    <input type="text" id="infoVetor3"/><br>
+    <button (click)="populaVetor3()" > OK </button>
+  </div>
+
+  <div>
+    <h4>Printa vetor</h4>
+    <button (click)="imprimeVet()">Printa</button>
+    <ul>
+      <li *ngFor="let dkv of infos3">
+          {{ dkv }}
+      </li>
+    </ul> 
+  </div>
+</div>
+<br><br>
+<br><br>
 
 
 
