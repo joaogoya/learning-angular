@@ -467,6 +467,22 @@ aula 13
 =========
 	reutilização de componentes
 
+	cria um componente novo
+	nos vamos usar o html do coponente novo (o reuso) dentro do  html do cad-cli
+	primeiro veremos como fazemos p passar informações do cad cli para o componente reuso
+	
+	é usado para "divir" o codigo
+		por exemplo, se temos um objeto carro
+		podemos ter um componente roda 
+			com todas as informações e html da roda
+		depois podemos ter um componente motor
+			com tudo que for relativo ao motor 
+		e assim sucessivamente
+
+	pra praticar isso vou criar o projeto carro
+		
+
+
 
 
 

@@ -57,12 +57,13 @@ export class CadastroComponent implements OnInit {
     this.infos3 = this.lorem2.buscaVetor(); 
   }
 
+  /* 
+    Reutilização de ocmponentes
+    Esta informação está sendo setada no cad-cli e printada no html do componente reuso.
+  */
+  infoTeste:string = "Apenas um teste sfegasrh";
 
-
-
-
-
-
+  
 
 
 

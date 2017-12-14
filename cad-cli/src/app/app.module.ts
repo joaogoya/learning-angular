@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ServCadService } from './cadastro/serv-cad.service';
+import { ComponeteReusoComponent } from './componete-reuso/componete-reuso.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroComponent
+    CadastroComponent,
+    ComponeteReusoComponent
   ],
   imports: [
     BrowserModule,
