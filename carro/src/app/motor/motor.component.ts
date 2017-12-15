@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-
+import { Component, OnInit, Input, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-motor',
@@ -15,13 +14,18 @@ export class MotorComponent implements OnInit {
 
   @Output() mudouValor = new EventEmitter();
 
+  @ViewChild('campoInput') campoValorInput: ElementRef ;
+
   incrementa(){
-    this.valorValue++;
+    //this.valorValue++;
+    this.campoValorInput.nativeElement.value++;
     this.mudouValor.emit({novoValor: this.valorValue});
+    console.log(this.campoValorInput.nativeElement.value);
     console.log("incrementa componente filho");
   }
   decrementa(){
-    this.valorValue--;
+    //this.valorValue--;
+    this.campoValorInput.nativeElement.value--;
     this.mudouValor.emit({novoValor: this.valorValue});
     console.log("decrementa componente filho");
   }

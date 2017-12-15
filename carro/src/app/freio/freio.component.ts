@@ -57,18 +57,11 @@ export class FreioComponent implements OnInit {
     //console.log(this.resultado);
   }
 
-
+  /* exe 01 fixação aula 14 */
   @Output() mandaEventoTeste = new EventEmitter();
-
   variavel: string = ""
-
   eTeste(){
     this.variavel = "textto teste";
     this.mandaEventoTeste.emit({ dadoEnviado2: this.variavel });
   }
-
-
-
-
-
 }

@@ -497,11 +497,23 @@ aula 14
 		fazer um evento no componente filho de uma meneira q o componete pai possa capturar e tb possa 
 		desenvolver alguma logica em cima
 		
-		
+===============================================================================
+aula 15
+=========		
+	ciclo de vida dos componentes
 
+	o angular tem varios eventos "defaullt", como o onInit
+	essa aula ela apreseta eles
+	pra essa aula vou criar um novo projeto, o ciclo
 
-
-
+===============================================================================
+aula 16
+=========	
+	acesso ao dom e ao template com view child
+	projeto carro
+	uma outra maneira de referenciar elementos do html 
+	ViewChild pelo que eu entendi não é, necessariamente, para ver um componente filho
+	mas sim, uma maneira de o componente ver o seu proprio html
 
 
 

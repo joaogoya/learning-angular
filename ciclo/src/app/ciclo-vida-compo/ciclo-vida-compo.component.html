@@ -1,0 +1,12 @@
+<p *ngIf="!deletarCiclo">
+      App ciclo de vida
+</p>
+
+Valor Inicial:
+<p>
+  {{ valorInicial }}
+</p>
+<p>
+  <button (click)="mudarValor()" >Muda Valor</button>
+  <button (click)="destruirCiclo()" >Destruir Ciclo</button>
+</p>
