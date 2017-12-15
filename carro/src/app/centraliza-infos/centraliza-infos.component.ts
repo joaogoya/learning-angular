@@ -10,6 +10,7 @@ export class CentralizaInfosComponent implements OnInit {
   constructor() {}
   ngOnInit() {}
 
+  /* aula 12 */
   roda = {
       aro : ' ',
       fabricante: ' ',
@@ -21,8 +22,17 @@ export class CentralizaInfosComponent implements OnInit {
    this.roda.cor = (<HTMLInputElement>document.getElementById('cor')).value;
  }
 
+/*aula 13*/
  infosRoda = "aaaaaaaa";
  infosPorta = "Infos Porta no componente centraliza";
  infosSuspencao = "Infos suspencao no centraliza";
  infosVolante = "Infos de volante no centraliza";
+
+ /* aula 14 */
+ infoValor:number = 106;
+ infoTeste:number = 0;
+ alteraValor(evento){
+   console.log(evento.novoValor);
+   this.infoTeste = evento.novoValor *3
+ }
 }

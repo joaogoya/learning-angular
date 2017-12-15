@@ -491,7 +491,16 @@ aula 14
 	oitput propriet
 		projeto carro - roda foi a aula 13
 		motor vai ser a aula 14
+
+		emitir eventos 
 		
+		fazer um evento no componente filho de uma meneira q o componete pai possa capturar e tb possa 
+		desenvolver alguma logica em cima
+		
+		
+
+
+
 
 
 

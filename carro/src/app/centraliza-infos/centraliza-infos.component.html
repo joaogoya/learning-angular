@@ -39,6 +39,17 @@
    <div>
      <app-volante [volante] = "infosVolante" ></app-volante>
    </div>
+   <br><br><br>
+   <div>
+     <h2>Aula 14</h2>
+     <hr>
+     
+     <app-motor [valorValue] = "infoValor" (mudouValor)="alteraValor($event)"></app-motor>
+     <span>
+       {{ infoTeste }}
+     </span>
+
+   </div>
 </div>
 <br><br>
 
