@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
-
 @Component({
   selector: 'app-freio',
   templateUrl: './freio.component.html',
@@ -10,8 +9,7 @@ export class FreioComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   @Input() texto = "";
   @Input() texto2 = "";
@@ -22,9 +20,9 @@ export class FreioComponent implements OnInit {
   segundoNumero: number = 0;
   resultado: number = 0;
   operacao: number = 0;
-  soma(){
+  soma() {
     //O angular concatena???
-    this.primeiroNumero = (<HTMLIFrameElement>document.getElementById("primeiro")).value;
+    this.primeiroNumero = (<HTMLIFrameElement>document.getElementById("primeiro")).value; 
     this.segundoNumero = (<HTMLIFrameElement>document.getElementById("segundo")).value;
     this.resultado = this.primeiroNumero + this.segundoNumero;
     this.operacao = 1;
@@ -32,7 +30,7 @@ export class FreioComponent implements OnInit {
     //console.log(this.resultado);
   }
 
-  diminui(){
+  diminui() {
     this.primeiroNumero = (<HTMLIFrameElement>document.getElementById("primeiro")).value;
     this.segundoNumero = (<HTMLIFrameElement>document.getElementById("segundo")).value;
     this.resultado = this.primeiroNumero - this.segundoNumero;
@@ -41,7 +39,7 @@ export class FreioComponent implements OnInit {
     //console.log(this.resultado);
   }
 
-  multiplica(){
+  multiplica() {
     this.primeiroNumero = (<HTMLIFrameElement>document.getElementById("primeiro")).value;
     this.segundoNumero = (<HTMLIFrameElement>document.getElementById("segundo")).value;
     this.resultado = this.primeiroNumero * this.segundoNumero;
@@ -50,7 +48,7 @@ export class FreioComponent implements OnInit {
     //console.log(this.resultado);
   }
 
-  divide(){
+  divide() {
     this.primeiroNumero = (<HTMLIFrameElement>document.getElementById("primeiro")).value;
     this.segundoNumero = (<HTMLIFrameElement>document.getElementById("segundo")).value;
     this.resultado = this.primeiroNumero / this.segundoNumero;
@@ -58,4 +56,19 @@ export class FreioComponent implements OnInit {
     this.mandaEvento.emit({ dadoEnviado: this.operacao });
     //console.log(this.resultado);
   }
+
+
+  @Output() mandaEventoTeste = new EventEmitter();
+
+  variavel: string = ""
+
+  eTeste(){
+    this.variavel = "textto teste";
+    this.mandaEventoTeste.emit({ dadoEnviado2: this.variavel });
+  }
+
+
+
+
+
 }

@@ -34,7 +34,7 @@ export class CentralizaInfosComponent implements OnInit {
  alteraValor(evento){
    console.log(evento.novoValor);
    this.infoTeste = evento.novoValor *3;
- }
+ } 
 
 /* aula 14 - exe 02 */
  txtTeste: string = "Apenas algumas informações sobre o componente freio";
@@ -57,5 +57,9 @@ export class CentralizaInfosComponent implements OnInit {
         break;
     }
     console.log(this.mesagem);
+ }
+ teste2 = "";
+ eventoTeste(e){
+    this.teste2 = e.dadoEnviado2;
  }
 }

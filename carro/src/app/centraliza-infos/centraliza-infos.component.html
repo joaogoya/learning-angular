@@ -1,67 +1,68 @@
-<br><br>
+<br>
+<br>
 <div>
   <h1>Carro</h1>
   <!-- 
     na raiz dos projetos, a pasta angular tem um txt chmado angular
     a partir da linha 482 tem uma especie de leia-me deste projeto
    -->
-   <div id="roda" class="container">
+  <div id="roda" class="container">
     <h1>roda</h1>
     <div class="left">
-        <h3> Preencha </h3>
-        <input type="text" id="aro" placeholder="aro" value="a">
-        <input type="text" id="fabricante" placeholder="fabricante" value="a">
-        <input type="text" id="cor" placeholder="cor" value="c">
-        <br> <br>
-        <button (click)="salvarRoda()" >Salvar</button>
+      <h3> Preencha </h3>
+      <input type="text" id="aro" placeholder="aro" value="a">
+      <input type="text" id="fabricante" placeholder="fabricante" value="a">
+      <input type="text" id="cor" placeholder="cor" value="c">
+      <br>
+      <br>
+      <button (click)="salvarRoda()">Salvar</button>
     </div>
 
     <div class="right">
       <h3>Infos roda</h3>
-        <ul>
-          <li>{{ roda.aro }} </li>
-          <li>{{ roda.fabricante }}</li>
-          <li>{{ roda. cor }}</li>
-        </ul>
+      <ul>
+        <li>{{ roda.aro }} </li>
+        <li>{{ roda.fabricante }}</li>
+        <li>{{ roda. cor }}</li>
+      </ul>
     </div>
     <p class="clear"></p>
-   </div>
-   <br><br>
-   <div>
-    <roda [roda] = "infosRoda"></roda>
-   </div>
-   <div>
-      <app-porta [porta] = "infosPorta" ></app-porta>      
-   </div>
-   <div>
-      <app-suspencao [suspencao] = "infosSuspencao"></app-suspencao>
-   </div>
-   <div>
-     <app-volante [volante] = "infosVolante" ></app-volante>
-   </div>
-   <br><br><br>
-   <div>
-     <h2>Aula 14</h2>
-     <hr>
-     <app-motor [valorValue] = "infoValor" (mudouValor)="alteraValor($event)"></app-motor>
-     <span>
-       {{ infoTeste }}
-     </span>
+  </div>
+  <br>
+  <br>
+  <div>
+    <roda [roda]="infosRoda"></roda>
+  </div>
+  <div>
+    <app-porta [porta]="infosPorta"></app-porta>
+  </div>
+  <div>
+    <app-suspencao [suspencao]="infosSuspencao"></app-suspencao>
+  </div>
+  <div>
+    <app-volante [volante]="infosVolante"></app-volante>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
+    <h2>Aula 14</h2>
+    <hr>
+    <app-motor [valorValue]="infoValor" (mudouValor)="alteraValor($event)"></app-motor>
+    <span>
+      {{ infoTeste }}
+    </span>
 
-     <app-freio 
-        [texto]="txtTeste" 
-        [texto2]="txtTeste2" 
-        (mandaEvento)="enventoComFilho($event)" >
-     </app-freio>
-     <p> {{ mesagem }} </p>
-   </div>
+    <app-freio 
+      [texto]="txtTeste" 
+      [texto2]="txtTeste2" 
+      (mandaEvento)="enventoComFilho($event)"
+      (mandaEventoTeste)="eventoTeste($event)"
+      >
+    </app-freio>
+    <p> {{ mesagem }} </p>
+    <p> {{ teste2 }} </p>
+  </div>
 </div>
-<br><br>
-
-
-
-
-
-
-
-
+<br>
+<br>
