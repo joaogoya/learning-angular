@@ -481,9 +481,23 @@ aula 13
 
 	pra praticar isso vou criar o projeto carro
 		as informações de roda estão todas no mesmo componente.
+	
+	fiz os componentes porta, e radio pra preticar isso
 
+
+===============================================================================
+aula 14
+=========		
+	oitput propriet
+		projeto carro - roda foi a aula 13
+		motor vai ser a aula 14
 		
-		
+
+
+
+
+
+
 
 
 

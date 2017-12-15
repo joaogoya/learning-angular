@@ -22,4 +22,7 @@ export class CentralizaInfosComponent implements OnInit {
  }
 
  infosRoda = "aaaaaaaa";
+ infosPorta = "Infos Porta no componente centraliza";
+ infosSuspencao = "Infos suspencao no centraliza";
+ infosVolante = "Infos de volante no centraliza";
 }
