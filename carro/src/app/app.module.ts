@@ -9,6 +9,7 @@ import { MotorComponent } from './motor/motor.component';
 import { PortaComponent } from './porta/porta.component';
 import { SuspencaoComponent } from './suspencao/suspencao.component';
 import { VolanteComponent } from './volante/volante.component';
+import { FreioComponent } from './freio/freio.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { VolanteComponent } from './volante/volante.component';
     MotorComponent,
     PortaComponent,
     SuspencaoComponent,
-    VolanteComponent
+    VolanteComponent,
+    FreioComponent
   ],
   imports: [
     BrowserModule

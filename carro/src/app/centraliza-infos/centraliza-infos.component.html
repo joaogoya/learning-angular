@@ -43,12 +43,17 @@
    <div>
      <h2>Aula 14</h2>
      <hr>
-     
      <app-motor [valorValue] = "infoValor" (mudouValor)="alteraValor($event)"></app-motor>
      <span>
        {{ infoTeste }}
      </span>
 
+     <app-freio 
+        [texto]="txtTeste" 
+        [texto2]="txtTeste2" 
+        (mandaEvento)="enventoComFilho($event)" >
+     </app-freio>
+     <p> {{ mesagem }} </p>
    </div>
 </div>
 <br><br>

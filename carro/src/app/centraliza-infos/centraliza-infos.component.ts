@@ -28,11 +28,34 @@ export class CentralizaInfosComponent implements OnInit {
  infosSuspencao = "Infos suspencao no centraliza";
  infosVolante = "Infos de volante no centraliza";
 
- /* aula 14 */
+ /* aula 14 - exe 01 */
  infoValor:number = 106;
  infoTeste:number = 0;
  alteraValor(evento){
    console.log(evento.novoValor);
-   this.infoTeste = evento.novoValor *3
+   this.infoTeste = evento.novoValor *3;
+ }
+
+/* aula 14 - exe 02 */
+ txtTeste: string = "Apenas algumas informações sobre o componente freio";
+ txtTeste2: string = "Lorem Impsum";
+ mesagem: string = "Lorem";
+
+ enventoComFilho(event){
+    switch(event.dadoEnviado){
+      case 1:
+        this.mesagem = "Soma";
+        break;
+      case 2:
+        this.mesagem = "subtração";
+        break;
+      case 3:
+        this.mesagem = "Multiplicação";
+        break;
+      case 4:
+        this.mesagem = "divisao";
+        break;
+    }
+    console.log(this.mesagem);
  }
 }
