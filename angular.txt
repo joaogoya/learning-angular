@@ -515,13 +515,103 @@ aula 16
 	ViewChild pelo que eu entendi não é, necessariamente, para ver um componente filho
 	mas sim, uma maneira de o componente ver o seu proprio html
 
+===============================================================================
+aula 17
+=========
+	angular cli
+	coisas q ela ja havia explicado na aula 1
 
 
+===============================================================================
+aula 18
+=========
+	como criar componentes e classe de servico
+	coisas q ela tb ja havia explicado na aula 1
+
+===============================================================================
+aula 19
+=========
+	usando less, sass e stylus
+		qd for criar o projeto, avisa q vai usar pre processador, por parametro
+		p criar um projeto é:
+			ng new nome-do-projeto
+		cmo pre-processador:
+			ng new nome-do-projeto --less 
+
+		tb da p setar o css de projetos existentes, para "virarem" projetos com pre procssadores
+			ng set defaults.styleExt less
+
+		na real os projetos nao viram projetos com pre processadores
+			os componentes que ja existem continuam como css
+			os novos passam a ser com pre processador escolhido.
+			nos ja existentes, da pra mudar a extenção na mao
 
 
+===============================================================================
+aula 20
+=========
+	ng lint, ng test e ng e2e
+
+	ngLint
+		veio do java, o jsLint
+		percorre o codigo e procura por erros de sintaxe, tipo dois ponto virgula ;;
+		tb vavalia se o codigo ta dentro dos padroes de boas praticas
+		executamos na pasta do projeto, e nao nas pastas dos componentes
+
+	ng test
+		usa o jasmin, que é uma biblioteca de BDD - testes orientados a comportamentos
+		fala mt sobre testes 
+
+	ng e2e	
+		testes de integração
+		entirety to entirety
+
+===============================================================================
+aula 21
+=========
+	angular cli
+	exolica tudo q o cli cira qd criamos um projeto
 
 
+===============================================================================
+aula 22
+=========
+	gerando build de projeto
 
+	tem duas builds
+		a buld de desenvolvimento
+		e a build de producao
+
+		dev é ng build
+
+		prod é ng build --proj
+
+	ad aus builds geram os mesmos arquivos, a diferença é q na build de prod ainda nao ta minificado, anda tem as variaveis,...
+	e na prod é tudo compilado e minificado
+	a buid de dev é mais legivel para humanos
+
+	http serve	
+		é um servidor do node
+		https://www.npmjs.com/package/http-server 	
+		npm install http-server -g
+
+		com o servidor instalado, depois de dar a build, da um http serve e versao de produção vai ser servida no browser
+
+===============================================================================
+aula 23
+=========
+	instalaçoa de bibliotecas externas
+	bootstrap, jquery, materialize css, ....
+
+	bootstrap:
+		vai na pasta do projeto e da um $ npm install bootstrap@3 jquery --save
+		depois q a instalação terminar, da p ir no package.json p ver se foi instalado
+		o bootstrap ja instala o jquery, pq precisa dele p fincionar
+		o bootstrap tb instala o teter 
+		depois temos q avisar o angular o endereço dos js e css das 3 libs
+		no arquivo angular cli .json
+		
+		https://medium.com/codingthesmartway-com-blog/using-bootstrap-with-angular-c83c3cee3f4a
 
 
 
