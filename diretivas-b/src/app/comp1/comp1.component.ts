@@ -27,4 +27,10 @@ export class Comp1Component implements OnInit {
   mudar2(){
     this.ativo2 = !this.ativo2;
   }
+
+  tarefa: any = {
+    desc: 'Descricao da tardefa',
+    responsavel: null 
+  }
+
 }
