@@ -44,3 +44,18 @@
     </div>
   </div>
 </div>
+<br>
+<div class="container well">
+  <div class="row">
+    <div class="col-ts-12">
+      <h1>Diretiva ngClass</h1>
+      <i class="glyphicon" [class.glyphicon-eye-close]="!meuFavorito" [class.glyphicon-eye-open]="meuFavorito" (click)="onClick()"></i>
+      <br>
+      <i class="glyphicon" [ngClass]="{
+        'glyphicon-folder-close': !meuFavorito,
+        'glyphicon-folder-open': meuFavorito
+       }" (click)="onClick()"></i>
+    </div>
+  </div>
+</div>
+

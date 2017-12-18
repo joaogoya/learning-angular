@@ -10,6 +10,12 @@ export class Comp1Component implements OnInit {
   ngOnInit() {}
 
   aba:string = "home";
-  cursos: string[] = ['Java Script Orientado', 'Angular', 'PHP OO', 'C#', 'SQL Server', 'HTML', 'CSS']
+  cursos: string[] = ['Java Script Orientado', 'Angular', 'PHP OO', 'C#', 'SQL Server', 'HTML', 'CSS'];
+
+
+  meuFavorito: boolean = true;
+  onClick(){
+    this.meuFavorito = !this.meuFavorito;
+  }
 
 }
