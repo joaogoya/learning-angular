@@ -606,17 +606,35 @@ aula 23
 	bootstrap:
 		vai na pasta do projeto e da um $ npm install bootstrap@3 jquery --save
 		depois q a instalação terminar, da p ir no package.json p ver se foi instalado
-		o bootstrap ja instala o jquery, pq precisa dele p fincionar
+		o bootstrap ja instala o jquery, pq precisa dele p funcionar
 		o bootstrap tb instala o teter 
 		depois temos q avisar o angular o endereço dos js e css das 3 libs
 		no arquivo angular cli .json
 		
-		https://medium.com/codingthesmartway-com-blog/using-bootstrap-with-angular-c83c3cee3f4a
+		https://loiane.com/2017/08/how-to-add-bootstrap-to-an-angular-cli-project/
+		
+		appteste 5
 
 
 
+===============================================================================
+aula 24
+=========
+
+	diretivas
+		diretivas estruturais
+			modificam o dom (HTML)
+				if, for switch, ...
+		diretivas de atributos	
+			interagem coo html, mas nao modificam
+				ng class, ng style, ...
+			interagem com html pelos atributos
 
 
+===============================================================================
+aula 25
+=========
+	diretiva ng if
 
 
 
