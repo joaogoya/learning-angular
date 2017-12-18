@@ -73,8 +73,7 @@
           'background': ativo2 ? 'blue' : 'gray',
           'color': ativo2 ? 'white' : 'black',
           'fontWeight': ativo2 ? 'bold' : 'normal'
-        }" 
-        (click)="mudar2()">
+        }" (click)="mudar2()">
         Botão 2
       </button>
     </div>
@@ -86,18 +85,37 @@
     <div class="col-ts-12">
       <h1>Operador Elvis - ?</h1>
       <ul class="list-group">
-       <li class="list-group-item"><b>Descricao:</b> {{ tarefa.desc }} </li>
-       <li class="list-group-item">
+        <li class="list-group-item">
+          <b>Descricao:</b> {{ tarefa.desc }} </li>
+        <li class="list-group-item">
           <b>Responavel</b>
           {{ tarefa.responsavel != null ? tarefa.responsavel : '' }}
         </li>
-       <li class="list-group-item">
+        <li class="list-group-item">
           <b>Responavel</b>
           {{ tarefa?.responsavel }}
-       </li>
+        </li>
       </ul>
     </div>
   </div>
 </div>
-<br><br><br>
 
+<div class="container well">
+  <div class="row">
+    <div class="col-ts-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <ng-content select=".titulo"></ng-content>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <ng-content select=".conteudo"></ng-content> <!-- vem do modulo PAI -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
