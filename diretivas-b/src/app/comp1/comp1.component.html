@@ -1,13 +1,22 @@
-<nav class="navbar navbar-default">
+<div class="well">
+  <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">WebSiteName</a>
       </div>
       <ul class="nav navbar-nav ">
-        <li [class.active]="aba == 'home'"><a (click)="aba='home'" href="#">Home</a></li>
-        <li [class.active]="aba == 'mapa'"><a (click)="aba='mapa'" href="#">mapa</a></li>
-        <li [class.active]="aba == 'lista'"><a (click)="aba='lista'" href="#">lista</a></li>
-        <li [class.active]="aba == 'outros'"><a (click)="aba='outros'" href="#">outros</a></li>
+        <li [class.active]="aba == 'home'">
+          <a (click)="aba='home'" href="#">Home</a>
+        </li>
+        <li [class.active]="aba == 'mapa'">
+          <a (click)="aba='mapa'" href="#">mapa</a>
+        </li>
+        <li [class.active]="aba == 'lista'">
+          <a (click)="aba='lista'" href="#">lista</a>
+        </li>
+        <li [class.active]="aba == 'outros'">
+          <a (click)="aba='outros'" href="#">outros</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -23,25 +32,15 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
+<br>
+<div class="container well">
+  <div class="row">
+    <div class="col-ts-12">
+      <h1>Cursos</h1>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let curso of cursos let i = index">{{ i + 1 }} - {{curso}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

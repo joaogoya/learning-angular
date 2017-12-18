@@ -10,5 +10,6 @@ export class Comp1Component implements OnInit {
   ngOnInit() {}
 
   aba:string = "home";
+  cursos: string[] = ['Java Script Orientado', 'Angular', 'PHP OO', 'C#', 'SQL Server', 'HTML', 'CSS']
 
 }
