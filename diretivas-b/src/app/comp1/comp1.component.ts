@@ -18,4 +18,13 @@ export class Comp1Component implements OnInit {
     this.meuFavorito = !this.meuFavorito;
   }
 
+  ativo: boolean = false;
+  mudar(){
+    this.ativo = !this.ativo;
+  }
+
+  ativo2: boolean = false;
+  mudar2(){
+    this.ativo2 = !this.ativo2;
+  }
 }

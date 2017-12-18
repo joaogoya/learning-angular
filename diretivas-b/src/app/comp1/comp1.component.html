@@ -59,3 +59,23 @@
   </div>
 </div>
 
+<div class="container well">
+  <div class="row">
+    <div class="col-ts-12">
+      <h1>Diretiva ngStyle</h1>
+      <button [style.background]="ativo ? 'blue' : 'gray'" [style.color]="ativo ? 'white' : 'black'" [style.fontWeight]="ativo ? 'bold' : 'normal'"
+        (click)="mudar()">
+        Botão 01
+      </button>
+      <br>
+      <br>
+      <button [ngStyle]="{
+          'background': ativo2 ? 'blue' : 'gray',
+          'color': ativo2 ? 'white' : 'black',
+          'fontWeight': ativo2 ? 'bold' : 'normal'
+        }" (click)="mudar2()">
+        Botão 2
+      </button>
+    </div>
+  </div>
+</div>
