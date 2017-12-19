@@ -9,12 +9,16 @@ import { Comp1Component } from './comp1/comp1.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { DiretivaTesteDirective } from './shared/diretiva-teste.directive';
+import { TesteDiretiva2Directive } from './shared/teste-diretiva2.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    Comp1Component
+    Comp1Component,
+    DiretivaTesteDirective,
+    TesteDiretiva2Directive
   ],
   imports: [
     BrowserModule,

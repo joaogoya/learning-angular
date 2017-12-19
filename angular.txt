@@ -673,6 +673,75 @@ aula 32
 =========
 	ng content
 
+===============================================================================
+aula 33
+=========
+	criando diretivas
+	elementref e  renderer
+	
+	é um componente sem template
+	ajuda a manipular o dom
+
+		diretivas estruturais	
+			manipulam o dom
+				if, for, switch. ......
+		
+		diretivas de atributos
+			interegem com o dom, sem manipula-lo
+			ngClass, ngStyle,....
+
+		E a diretiva q vai ser criada é de atributo, vai mudar a cor de um elementos
+
+		ng g d nome-da-diretiva 
+		
+		qd criamos componentes o angular cli ja cria:
+			o componente.ts
+			o template
+			o css
+			o arquivo de teste
+			e ja faz todos os paontamentos internos e com o modulo.
+
+		diretivas normalmente sao compartilhadas por toda a aplicação
+		o angular cli ja cria, qd criamos um projeto, um diretorio chamado de shared
+		ali ficam todos os arquivos compartilhados por todos os componentes
+		é boa pratica criar as diretivas ali
+		ng g d shared/nome-da-diretiva
+
+		o angular cli ja aponta adiretiva no modulo
+
+		a comunidade angular pede p nao utilizar o elementRef, pq cria pontos de vulnerabilidade para ataques xxs
+		é melhor utilizar o renderer e passar o elemnt ref por ele
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
