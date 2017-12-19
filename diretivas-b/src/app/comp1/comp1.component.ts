@@ -6,6 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comp1.component.css']
 })
 export class Comp1Component implements OnInit {
+
+  
+  /*diretivas estruturais*/
+  cursos2:string[] = ['angular', 'java', 'javascrip', 'html'];
+  exibeCursos2: boolean = true;
+  alteraEstadoCursos2(){
+    this.exibeCursos2 = !this.exibeCursos2;
+  }
+  /* fom diretivas estruturais */
+
+
+
   constructor() {}
   ngOnInit() {}
 
@@ -32,5 +44,6 @@ export class Comp1Component implements OnInit {
     desc: 'Descricao da tardefa',
     responsavel: null 
   }
+
 
 }

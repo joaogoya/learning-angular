@@ -161,6 +161,41 @@
     </div>
   </div>
 </div>
+
+
+<div class="container well">
+  <div class="row">
+    <div class="col-ts-12">
+      <h1>Diretivas estruturais</h1>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              diretiva estrutural 01
+            </h3>
+          </div>
+          <div class="panel-body">
+            <h4>ng if e else</h4>
+            <br>
+            <button (click)="alteraEstadoCursos2()" class="btn">clique para exibir / ocultar cursos</button>
+            <br><br>
+            
+            <ul *ngIf="exibeCursos2" class="list-group">
+              <li *ngFor='let curso of cursos2'
+                class="list-group-item"> {{ curso }} </li>
+            </ul>
+            
+            <ul *ngElse="!exibeCursos2" class="list-group">
+              <li class="list-group-item">
+                Você escondeu os cursos
+              </li>
+            </ul>
+
+
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
 <br>
 <br>
 <br>

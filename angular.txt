@@ -180,7 +180,7 @@ aula 04
 		apresenta variaveis
 		apresenta uma function norml
 		apresenta uma arrow function, que é ECMA
-			apaga apalavra function, fica o valor e uma seta
+			apaga a palavra function, fica o valor e uma seta
 			numeros.map(valor =>)
 			depois vem o que a function executa
 			numeros.map(valor => {do sonthing;})
@@ -343,11 +343,11 @@ aula 07
 
 	para criar uma classe de servico:
 		pode serna mao
-			create file, .......
+			
+		pode ser via terminal
+			o angular cli ja cria o esqueletocreate file, .......
 			depois do arquivo criado, colocar o "esqueleto"
 				imports, classe, metodo, .....
-		pode ser via terminal
-			o angular cli ja cria o esqueleto
 
 		fazer alguns via terminal p fixar o passo a passo e a logica
 
@@ -488,7 +488,7 @@ aula 13
 ===============================================================================
 aula 14
 =========		
-	oitput propriet
+	output propriet
 		projeto carro - roda foi a aula 13
 		motor vai ser a aula 14
 
@@ -747,8 +747,12 @@ aula 35
 	inicia a aula copiando o conteudo da aula passada
 	pelo visto inicia a partir de um hostbiding
 
-
-
+===============================================================================
+aula 36
+=========
+	diretivas de estruturas
+	diretivas q modificam a estrutura do dom
+	
 
 
 

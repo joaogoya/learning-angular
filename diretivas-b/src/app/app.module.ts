@@ -17,6 +17,7 @@ import { DiretivaTeste6Directive } from './shared/diretiva-teste6.directive';
 import { DiretivaTeste7Directive } from './shared/diretiva-teste7.directive';
 import { DiretivaTeste8Directive } from './shared/diretiva-teste8.directive';
 import { DiretivaTeste9Directive } from './shared/diretiva-teste9.directive';
+import { DiretivaEstrutural1Directive } from './shared/diretiva-estrutural1.directive';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { DiretivaTeste9Directive } from './shared/diretiva-teste9.directive';
     DiretivaTeste6Directive,
     DiretivaTeste7Directive,
     DiretivaTeste8Directive,
-    DiretivaTeste9Directive
+    DiretivaTeste9Directive,
+    DiretivaEstrutural1Directive
   ],
   imports: [
     BrowserModule,
