@@ -110,23 +110,36 @@
           </h3>
         </div>
         <div class="panel-body">
-          <ng-content select=".conteudo"></ng-content> <!-- vem do modulo PAI -->
+          <ng-content select=".conteudo"></ng-content>
+          <!-- vem do modulo PAI -->
         </div>
       </div>
     </div>
   </div>
 </div>
 
-  <div class="container well">
-    <div class="row">
-      <div class="col-ts-12">
-        <h1>Diretiva teste</h1>
-        <p DiretivaTeste>Texto customizado</p>
-        <p appTesteDiretiva2>teste 2</p>
+<div class="container well">
+  <div class="row">
+    <div class="col-ts-12">
+      <h1>Diretiva teste</h1>
+      <p DiretivaTeste>Texto customizado</p>
+      <p appTesteDiretiva2>teste 2</p>
+      <p appDiretivaTeste5>Diretiva teste 5</p>
+      <p appDiretivaTeste6>Mais um teste</p>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 appDiretivaTeste7 class="panel-title">
+            Titulo
+          </h3>
+        </div>
+        <div appDiretivaTeste7 appDiretivaTeste6 class="panel-body">
+          Conteudo do panel
+        </div>
       </div>
     </div>
   </div>
-
+</div>
 <br>
 <br>
 <br>

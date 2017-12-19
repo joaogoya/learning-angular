@@ -11,6 +11,10 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { DiretivaTesteDirective } from './shared/diretiva-teste.directive';
 import { TesteDiretiva2Directive } from './shared/teste-diretiva2.directive';
+import { DiretivaTeste3Directive } from './diretiva-teste3.directive';
+import { DiretivaTeste5Directive } from './shared/diretiva-teste5.directive';
+import { DiretivaTeste6Directive } from './shared/diretiva-teste6.directive';
+import { DiretivaTeste7Directive } from './shared/diretiva-teste7.directive';
 
 
 @NgModule({
@@ -18,7 +22,11 @@ import { TesteDiretiva2Directive } from './shared/teste-diretiva2.directive';
     AppComponent,
     Comp1Component,
     DiretivaTesteDirective,
-    TesteDiretiva2Directive
+    TesteDiretiva2Directive,
+    DiretivaTeste3Directive,
+    DiretivaTeste5Directive,
+    DiretivaTeste6Directive,
+    DiretivaTeste7Directive
   ],
   imports: [
     BrowserModule,

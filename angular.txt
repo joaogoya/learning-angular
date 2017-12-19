@@ -712,7 +712,42 @@ aula 33
 		a comunidade angular pede p nao utilizar o elementRef, pq cria pontos de vulnerabilidade para ataques xxs
 		é melhor utilizar o renderer e passar o elemnt ref por ele
 
+===============================================================================
+aula 34
+=========
+	diretivas
+		hostListern
+		hostbinder
 
+		escutar eventos em elementos cm diretivas customizadas
+			hostListern
+		
+		sem hosbiding
+
+			no construtor faz a injeção de dependecia da ref e da render, instanciando objetos
+
+			importa anhostlistern p escuta os eventos do template
+			passa o evento q quer escutar e cria o nomedo do metodo
+			
+			dentro do metodo criado nas host, utiliza o render p dizer o qq tem q acontecer no template com o elemento referenciado
+				p isso tem q importara a elementref e a render
+			
+		com hosbiding
+			importa a host biding
+			diz qual a propriedade vai ser editada e cria uma variavel p isso
+			nas hostlistern atribui valor para a variavel
+			
+
+
+===============================================================================
+aula 35
+=========
+	diretivas de @input e property biding
+
+	importa anhostlistern p escuta os eventos do template
+	passa o evento q quer escutar e cria o nomedo do metodo
+	dentro do metodo, utiliza o render p dizer o qq tem q acontecer no template com o elemento referenciado
+		p isso tem q importara a elementref e a render
 
 
 
