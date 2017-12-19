@@ -14,6 +14,14 @@ export class Comp1Component implements OnInit {
   alteraEstadoCursos2(){
     this.exibeCursos2 = !this.exibeCursos2;
   }
+
+  //exe 02
+  variavel12:boolean = true;
+  btAlteraCont(){
+    this.variavel12 = !this.variavel12;
+  }
+
+
   /* fom diretivas estruturais */
 
 

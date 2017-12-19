@@ -752,7 +752,21 @@ aula 36
 =========
 	diretivas de estruturas
 	diretivas q modificam a estrutura do dom
+
+	importa templateRef
+	importa viewContainerRef
+	faz a injeção de dependencia deles no construtor
 	
+	importa o @Input, e é ele q faz a parada
+		normalmente qd trabalhamos com @Input, declaramos uma variavel
+		aqui, declaramos um metodo passando alguma coisa, e o metodo manipula os elementos
+		o container, com o metodo createEmbeddedView passa o template
+
+
+
+
+
+
 
 
 
