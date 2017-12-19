@@ -1,6 +1,7 @@
 ===============================================================================
 aula 01
 =========
+	playlist da loiane no youtube - https://www.youtube.com/watch?v=tPOMG0D57S0&list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G
 
 	apresentação
 	
@@ -761,6 +762,58 @@ aula 36
 		normalmente qd trabalhamos com @Input, declaramos uma variavel
 		aqui, declaramos um metodo passando alguma coisa, e o metodo manipula os elementos
 		o container, com o metodo createEmbeddedView passa o template
+
+
+===============================================================================
+aula 37
+=========
+	servicos
+	buscar e mandar dados p banco
+	apresentação e utilização
+
+
+===============================================================================
+aula 37
+=========	
+	serviços
+	introdução
+
+===============================================================================
+aula 38
+=========
+	serviços
+	exemplo parecido com o q ela ja tinha dado no inicio do curso
+
+===============================================================================
+aula 39
+=========
+	serviços
+	injeção de dependencia
+
+===============================================================================
+aula 40
+=========
+	serviços
+	single injectio e varias instancias
+	dois componentes utilizam o mesmo servico
+		por exemplo
+		componente um tem uma classe de servico, a servicoUm
+
+		se eu criar algum outor componente, eu posso importar essa classe	
+			import {nomeDaClasse} from '../caminho/da/pasta';
+			é só tratar o from p apntar pra pasta do servico um 
+
+		da p criar um modulo p cada componente
+			assim, os dois componentes trabalham com a mesma classe de servico, mas cada um com seu modulo
+
+		no modulo, temos q informar q a classe de serviço é um provider.
+		tb da pra fazer isso no componente
+			@Component({
+				selector: 'app-servico-dois',
+				templateUrl: './servico-dois.component.html',
+				styleUrls: ['./servico-dois.component.css']
+				providers: [NomeClasseServico]
+			})
 
 
 
