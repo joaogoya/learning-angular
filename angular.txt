@@ -733,10 +733,10 @@ aula 34
 				p isso tem q importara a elementref e a render
 			
 		com hosbiding
-			importa a host biding
-			diz qual a propriedade vai ser editada e cria uma variavel p isso
+			importa a host biding e a host listernen, nao precisa ref e render
+			diz qual a propriedade com a binding vai ser editada e cria uma variavel p isso
 			nas hostlistern atribui valor para a variavel
-			
+
 
 
 ===============================================================================
@@ -744,10 +744,9 @@ aula 35
 =========
 	diretivas de @input e property biding
 
-	importa anhostlistern p escuta os eventos do template
-	passa o evento q quer escutar e cria o nomedo do metodo
-	dentro do metodo, utiliza o render p dizer o qq tem q acontecer no template com o elemento referenciado
-		p isso tem q importara a elementref e a render
+	inicia a aula copiando o conteudo da aula passada
+	pelo visto inicia a partir de um hostbiding
+
 
 
 

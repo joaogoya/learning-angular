@@ -121,7 +121,7 @@
 <div class="container well">
   <div class="row">
     <div class="col-ts-12">
-      <h1>Diretiva teste</h1>
+      <h1>Diretivas</h1>
       <p DiretivaTeste>Texto customizado</p>
       <p appTesteDiretiva2>teste 2</p>
       <p appDiretivaTeste5>Diretiva teste 5</p>
@@ -130,13 +130,34 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 appDiretivaTeste7 class="panel-title">
-            Titulo
+            diretiva com elemet ref e render
           </h3>
         </div>
         <div appDiretivaTeste7 appDiretivaTeste6 class="panel-body">
           Conteudo do panel
         </div>
       </div>
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 appDiretivaTeste8 class="panel-title">
+            diretiva com hostbiding
+          </h3>
+        </div>
+        <div appDiretivaTeste8 class="panel-body">
+          Conteudo do panel
+        </div>
+      </div>
+      <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 appDiretivaTeste9 [variavel01]="'whitesmoke'" [variavel02]="'orange'" class="panel-title">
+              diretiva com @input
+            </h3>
+          </div>
+          <div appDiretivaTeste9 [variavel01]="'whitesmoke'" [variavel02]="'orange'" class="panel-body">
+            Conteudo do panel
+          </div>
+        </div>
     </div>
   </div>
 </div>
