@@ -11,7 +11,6 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 /* Componentes q estão aqui na appModule - declarations */
 import { ServicoUmComponent } from './servico-um/servico-um.component';
 import { ServicoDoisComponent } from './servico-dois/servico-dois.component';
-//import { ServicoSeteComponent } from './servico-sete/servico-sete.component';
 
 /*Classes de serviço - providers */
 import { ServicoUmService } from './servico-um/servico-um.service';
@@ -24,7 +23,7 @@ import { servicoQuatro } from './servico-quatro/servico-quatro.module';
 import { ServicoCincoModule } from './servico-cinco/servico-cinco.module';
 import { ServicoSeisModule } from './servico-seis/servico-seis.module';
 import { ServicoSeteModule } from'./servico-sete/servico-sete.module';
-
+import { ServicoOitoModule } from './servico-oito/servico-oito.module';
 
 @NgModule({
   declarations: [
@@ -45,7 +44,8 @@ import { ServicoSeteModule } from'./servico-sete/servico-sete.module';
     servicoTres,
     ServicoCincoModule,
     ServicoSeisModule,
-    ServicoSeteModule
+    ServicoSeteModule,
+    ServicoOitoModule
   ],
   providers: [
     ServicoUmService, 
