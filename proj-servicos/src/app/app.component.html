@@ -1,21 +1,36 @@
-
-<app-servico-um></app-servico-um>
+<app-servico-um>
+</app-servico-um>
 <br>
 <app-servico-dois></app-servico-dois>
 <br>
 
 <div class="container well">
-    <h1>Apenas uma instancia</h1>
-    <span>Todos os modulos sao atualizados</span>
-    <div class="row">
-        <div class="col-xs-7">
-            <app-servico-tres></app-servico-tres>
-        </div>
-        <div class="col-xs-5">
-            <app-servico-quatro></app-servico-quatro>
-        </div>
+  <h1>Apenas uma instancia</h1>
+  <span>Os dois modulos sao atualizados pq trablham com a mesma instancia da classe de serviço</span>
+  <div class="row">
+    <div class="col-xs-7">
+      <app-servico-tres></app-servico-tres>
     </div>
+    <div class="col-xs-5">
+      <app-servico-quatro></app-servico-quatro>
+    </div>
+  </div>
 </div>
 <br>
 
-  
+<div class="container well">
+  <h1>Mais de uma instancia</h1>
+  <span>
+    Cada modulo tem o seu proprio comportamento, apesar de trabalharem com a mesma classe de servico. Cada modulo trabalha com
+    sua instancia
+  </span>
+  <div class="row">
+    <div class="col-xs-6">
+      <app-servico-cinco></app-servico-cinco>
+    </div>
+    <div class="col-xs-6">
+      <app-servico-seis></app-servico-seis>
+    </div>
+  </div>
+</div>
+<br>

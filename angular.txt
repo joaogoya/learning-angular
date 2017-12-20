@@ -820,9 +820,8 @@ aula 40
 			se fizermos os imports sempre nos modulo, o servico é instaciado apenas uma vez
 			
 			qd fazemos imports via modules, as alterações sao aplicadas á todos os componentes e views q importam o servico
-			qd fazemos o import no @component do modulo, as alterações sao aplicadas apenas aquele componente, pq estamos mexendo só na instancia dele
-			
-
+			qd fazemos o import no @component do modulo, as alterações sao aplicadas apenas aquele componente,
+			pq estamos mexendo só na instancia dele
 
 
 			os componentes servicoUm e servicoDois, estao cada um trabalhando com sua classe de servico
@@ -832,7 +831,22 @@ aula 40
 			e vou ver como se trabalha uma instancia emais de uma instancia para a mesma classe de servico
 			o 3, q tem a classe de servico, busca as infos e exibe
 			
-		
+			os componetes 3 e 4 estao trabalhando com a mesma classe de servico e com a mesma instancia
+			os componentes 5 e 6 vao trabalhar com a mesma classe de servico, mas com instancias diferentes
+
+			criar componente 5
+			criar classe de servico
+			criar logica e fazer funcionar
+			criar modulo
+
+			criar componente 6
+			criar classe de servico
+			criar logica e fazer funcionar
+			criar modulo
+
+
+
+
 
 
 

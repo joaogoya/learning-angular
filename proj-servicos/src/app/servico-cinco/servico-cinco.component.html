@@ -1,0 +1,16 @@
+<h1> Servico 5</h1>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+    <br>
+    <input class="form-control" type="text" #valorNovoUm>
+    <button (click)="addInfo5(valorNovoUm.value)" class="btn">adicionar</button>
+    <br><br><br>
+    <ul class="list-group">
+      <li *ngFor="let info4 of infos4" class="list-group-item">
+        {{ info4 }}
+      </li>
+    </ul>
+  </div>
+</div>
