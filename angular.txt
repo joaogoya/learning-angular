@@ -814,6 +814,26 @@ aula 40
 				styleUrls: ['./servico-dois.component.css']
 				providers: [NomeClasseServico]
 			})
+			assim a classe servico é instanciada varias vezes
+			uma no modulo (seja o appModule ou algum modulo de servico), e outra cada vez e aparece em algum cmponente
+
+			se fizermos os imports sempre nos modulo, o servico é instaciado apenas uma vez
+			
+			qd fazemos imports via modules, as alterações sao aplicadas á todos os componentes e views q importam o servico
+			qd fazemos o import no @component do modulo, as alterações sao aplicadas apenas aquele componente, pq estamos mexendo só na instancia dele
+			
+
+
+
+			os componentes servicoUm e servicoDois, estao cada um trabalhando com sua classe de servico
+
+			nos componetes servico-tres e servico-4 eu vou utilizar, para os dois, a classe de servico do 
+			componente servico-3
+			e vou ver como se trabalha uma instancia emais de uma instancia para a mesma classe de servico
+			o 3, q tem a classe de servico, busca as infos e exibe
+			
+		
+
 
 
 
