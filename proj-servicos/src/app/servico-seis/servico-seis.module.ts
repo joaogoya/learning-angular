@@ -11,7 +11,6 @@ import { ModelCincoService } from '../servico-cinco/model-cinco.service';
     ServicoSeisComponent
   ],
   imports: [CommonModule],
-  //providers: [ModelCincoService],
   exports:[ServicoSeisComponent]
 })
 export class ServicoSeisModule { }

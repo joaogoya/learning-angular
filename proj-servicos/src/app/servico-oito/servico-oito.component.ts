@@ -20,5 +20,4 @@ export class ServicoOitoComponent implements OnInit {
   addNovaInfo8(e){
     this.objModel.addinfo(e);
   }
-
 }

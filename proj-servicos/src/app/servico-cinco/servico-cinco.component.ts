@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
-import { ModelCincoService } from './model-cinco.service';
+import {
+  ModelCincoService
+} from './model-cinco.service';
 
 @Component({
   selector: 'app-servico-cinco',
@@ -10,7 +15,7 @@ import { ModelCincoService } from './model-cinco.service';
 })
 export class ServicoCincoComponent implements OnInit {
 
-  infos4:string[];
+  infos4: string[];
 
   constructor(private objModel: ModelCincoService) {}
 
@@ -18,9 +23,8 @@ export class ServicoCincoComponent implements OnInit {
     this.infos4 = this.objModel.getInfo();
   }
 
-  addInfo5(info5:string){
-    
+  addInfo5(info5: string) {
+
     this.objModel.addinfo(info5);
   }
-
 }

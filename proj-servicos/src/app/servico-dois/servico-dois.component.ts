@@ -21,5 +21,4 @@ export class ServicoDoisComponent implements OnInit {
   addInfo(info:string){
     this.clServ.addInfooo(info);
   }
-
 }

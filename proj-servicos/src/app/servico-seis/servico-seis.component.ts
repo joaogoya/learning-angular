@@ -19,5 +19,4 @@ export class ServicoSeisComponent implements OnInit {
   addInfo6(info:string){
     this.ojdModel.addinfo(info);
   }
-
 }

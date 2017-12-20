@@ -10,7 +10,6 @@ import { ModelService } from '../servico-tres/model.service';
   ],
   imports: [
     CommonModule,
-    
   ],
   providers: [ModelService],
   exports:[ServicoQuatroComponent]

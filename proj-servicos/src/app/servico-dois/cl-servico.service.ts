@@ -5,9 +5,7 @@ export class ClServicoService {
 
   private infos:string[] = ['Lorem', 'Impsum', 'Dolor'];
 
-  constructor() {
-    //console.log('Instanciu Servico')
-   }
+  constructor() {}
   
    getInfos(){
     return this.infos;
@@ -16,5 +14,4 @@ export class ClServicoService {
   addInfooo( infoAdd:string ){
     this.infos.push(infoAdd);
   }
-
 }
