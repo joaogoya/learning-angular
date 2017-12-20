@@ -5,7 +5,7 @@ import {ModelSeteService} from './model-sete.service';
   selector: 'app-servico-sete',
   templateUrl: './servico-sete.component.html',
   styleUrls: ['./servico-sete.component.css'],
-  providers: [ModelSeteService]
+  providers:[ModelSeteService]
 })
 export class ServicoSeteComponent implements OnInit {
 
@@ -14,10 +14,12 @@ export class ServicoSeteComponent implements OnInit {
   
     ngOnInit() {
       this.infos7 = this.objModel.getInfo();
+      this.objModel.emitirInfoAdicionada.subscribe(
+        info5 => console.log(info5)
+      );
     }
-  
+    
     addInfo7(info5:string){
       this.objModel.addinfo(info5);
     }
-
 }

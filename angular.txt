@@ -847,7 +847,11 @@ aula 41
 	e vamos fazer o metodo em um, disparar um metodo em outro
 
 	pra isso vou criar os componentes 7 e 8
+	o componente 8 tem q ta no modulo do 7
 	
+
+
+
 
 
 

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { ServicoSeteComponent } from './servico-sete.component';
 import { ModelSeteService } from './model-sete.service';
+import { ServicoOitoModule } from '../servico-oito/servico-oito.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { ModelSeteService } from './model-sete.service';
   ],
   imports: [
     CommonModule,
+    ServicoOitoModule
   ],
-  exports: [ServicoSeteComponent]
+  exports: [ServicoSeteComponent],
 })
 export class ServicoSeteModule { }

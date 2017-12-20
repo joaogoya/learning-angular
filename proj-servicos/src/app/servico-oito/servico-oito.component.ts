@@ -9,15 +9,20 @@ import { ModelSeteService } from '../servico-sete/model-sete.service'
 })
 export class ServicoOitoComponent implements OnInit {
 
-  constructor(private objModel:ModelSeteService) {}
-
   infos8:string[];
+  infoEmitida:string;
+
+  constructor(private objModel:ModelSeteService) {}
 
   ngOnInit() {
     this.infos8 = this.objModel.getInfo();
+    ModelSeteService.criouNovaInfoNaModel.subscribe(
+      e => this.infoEmitida = e
+    );
   }
 
-  addNovaInfo8(e){
+  addNovaInfo8(e){ 
     this.objModel.addinfo(e);
+    console.log(this.infoEmitida);
   }
 }

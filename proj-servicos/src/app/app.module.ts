@@ -23,7 +23,7 @@ import { servicoQuatro } from './servico-quatro/servico-quatro.module';
 import { ServicoCincoModule } from './servico-cinco/servico-cinco.module';
 import { ServicoSeisModule } from './servico-seis/servico-seis.module';
 import { ServicoSeteModule } from'./servico-sete/servico-sete.module';
-import { ServicoOitoModule } from './servico-oito/servico-oito.module';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +45,6 @@ import { ServicoOitoModule } from './servico-oito/servico-oito.module';
     ServicoCincoModule,
     ServicoSeisModule,
     ServicoSeteModule,
-    ServicoOitoModule
   ],
   providers: [
     ServicoUmService, 
