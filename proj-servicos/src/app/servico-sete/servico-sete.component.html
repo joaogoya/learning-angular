@@ -1,0 +1,17 @@
+<br>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><h4>Serviço 7</h4></div>
+  <div class="panel-body">
+    <br>
+    <input class="form-control" type="text" #infoToAdd7>
+    <button (click)="addInfo7(infoToAdd7.value)" class="btn">adicionar</button>
+    <br><br><br>
+    <ul class="list-group">
+      <li *ngFor="let info7 of infos7" class="list-group-item">
+        {{ info7 }}
+      </li>
+      
+    </ul>
+  </div>
+</div>

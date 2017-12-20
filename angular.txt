@@ -834,15 +834,22 @@ aula 40
 			os componetes 3 e 4 estao trabalhando com a mesma classe de servico e com a mesma instancia
 			os componentes 5 e 6 vao trabalhar com a mesma classe de servico, mas com instancias diferentes
 
-			criar componente 5
-			criar classe de servico
-			criar logica e fazer funcionar
-			criar modulo
+===============================================================================
+aula 41
+=========
+	broadcast de eventos
+	qd um evento for disparado em um componete, fazer outro ouvir
+	o @input e @output serveme para comunicar componentes pai com componentes filhos
+	o que queremos e comunicar componentes q nao tenham relação nenhuma
 
-			criar componente 6
-			criar classe de servico
-			criar logica e fazer funcionar
-			criar modulo
+	nesse caso vamos trabalhar com dois componentes q tem a mesma classe de servico, mas cada um com sua instancia
+
+	e vamos fazer o metodo em um, disparar um metodo em outro
+
+	pra isso vou criar os componentes 7 e 8
+	
+
+
 
 
 
