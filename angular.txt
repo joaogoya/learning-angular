@@ -848,7 +848,46 @@ aula 41
 
 	pra isso vou criar os componentes 7 e 8
 	o componente 8 tem q ta no modulo do 7
+
+===============================================================================
+aula 42
+=========
+	Injetar servico dentro de outro serviço
+	injetar o serviço A no servico B
 	
+	Da mesma maneira q fazemos p chamar um serv em um componente
+
+	faz o import la em cima 
+	instancia no construtor
+	dae, assim, no serv B a gente tem uma instancia do erv A
+
+
+===============================================================================
+aula 43
+=========
+	Pipes
+	pipes sao filtros de data, moeda, .....
+	eles "arrumam" os valores
+	criei um projeto novo, o proj-pipe
+
+===============================================================================
+aula 44
+=========
+	criando um pipe
+	ng g p nome-do-pipe
+
+===============================================================================
+aula 45
+=========
+	aplicando locale nos pipes
+	
+
+
+
+
+
+
+
 
 
 

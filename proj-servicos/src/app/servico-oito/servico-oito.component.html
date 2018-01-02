@@ -13,6 +13,6 @@
         {{ i }}
       </li>
     </ul>
-    <p>Voce adicionou a informação <span> {{ infoEmitida }} </span> no serviço 7</p>
+    <p *ngIf="infoEmitida">Voce adicionou a informação <span><b> {{ infoEmitida }} </b></span> no serviço 7</p>
   </div>
 </div>
