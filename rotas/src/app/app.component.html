@@ -3,19 +3,26 @@
 
 
 <nav>
-  <div class="nav-wrapper blue darken-1">
+  <div class="nav-wrapper blue darken-4">
     <a routerLink="" class="brand-logo center">
-        Rotas
+      Rotas
     </a>
     <ul class="left hide-on-med-and-down">
-      <li>
-        <a routerLink="/login"> 
-            Login
+      <li routerLinkActive="active">
+        <a routerLink="/login">
+          Login
         </a>
       </li>
-      <li>
+      <li routerLinkActive="active">
         <a routerLink="/cursos">
-            Cursos
+          Cursos
+        </a>
+      </li>
+
+
+      <li routerLinkActive="active">
+        <a [routerLink]="['curso', idCurso.value]">
+            Cursos com id
         </a>
       </li>
     </ul>
@@ -23,5 +30,7 @@
 </nav>
 
 <div class="container">
-    <router-outlet></router-outlet>
+    <p>Informe o id</p>
+    <input #idCurso>
+  <router-outlet></router-outlet>
 </div>
