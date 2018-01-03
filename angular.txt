@@ -899,13 +899,10 @@ aula 46 e 47
 	A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe. 
 	An impure pipe is called for every change detection cycle no matter whether the value or parameters changes.
 
-
-
 ===============================================================================
 aula 48
 ========
 	pipe assincrono
-
 
 
 ===============================================================================
@@ -914,6 +911,23 @@ aula 49
 	rotas
 	ela instala uma outra versao do materialize
 	primmeiro componente é p testar o materialize
+	na 49 ela explica qual é a das single pages aplications
+
+
+===============================================================================
+aula 50
+=========
+	rota simples
+	criamos um arquivo de rotas
+
+===============================================================================
+aula 50
+=========
+
+
+
+	
+
 
 
 

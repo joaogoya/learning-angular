@@ -5,15 +5,23 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TestesMaterializeComponent } from './testes-materialize/testes-materialize.component';
 import { MaterializeModule } from "angular2-materialize";
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { CursosComponent } from './cursos/cursos.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestesMaterializeComponent
+    TestesMaterializeComponent,
+    HomeComponent,
+    LoginComponent,
+    CursosComponent
   ],
   imports: [
     BrowserModule,
-    MaterializeModule
+    MaterializeModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
