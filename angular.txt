@@ -880,15 +880,40 @@ aula 44
 aula 45
 =========
 	aplicando locale nos pipes
-	
+	no modlo, em provider da um:
+		providder: LOCALE_ID
+		lfaz parte do angular core, entao tem q importar la em cima
+	fiz igual ao da loianee nao rolou
+	tive que importar uma galera
+		import { LOCALE_ID } from '@angular/core';
+		import { registerLocaleData } from '@angular/common';
+		import localePt from '@angular/common/locales/pt'; 
+		registerLocaleData(localePt, 'pt-BR'); 
+
+
+===============================================================================
+aula 46 e 47
+=============
+	Pipes puros vs pipes impuros
+
+	A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe. 
+	An impure pipe is called for every change detection cycle no matter whether the value or parameters changes.
 
 
 
+===============================================================================
+aula 48
+========
+	pipe assincrono
 
 
 
-
-
+===============================================================================
+aula 49
+========
+	rotas
+	ela instala uma outra versao do materialize
+	primmeiro componente é p testar o materialize
 
 
 

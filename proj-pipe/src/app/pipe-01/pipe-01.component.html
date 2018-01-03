@@ -1,16 +1,40 @@
-<p> Titulo: {{ livro.titulo | uppercase | camelCase }}  </p>
-
-<p> Rating: {{ livro.rating | number: '2.3' }}  </p>
-
-<p> Pagina: {{ livro.numeroPaginas | number }}  </p>
-
-<p> Preco: {{ livro.preco | currency:'BRL':true }}  </p>
-
-<p> Data de Lnaçamento: {{ livro.dataLancamento | date:'dd-MM-yyyy' }}  </p>
-
-<p> URL: {{ livro.url }}  </p>
-
+<p> Titulo: {{ livro.titulo | uppercase | camelCase }} </p>
+<p> Rating: {{ livro.rating | number: '2.3' }} </p>
+<p> Pagina: {{ livro.numeroPaginas | number }} </p>
+<p> Preco: {{ livro.preco | currency:'BRL':true }} </p>
+<p> Data de Lnaçamento: {{ livro.dataLancamento | date }} </p>
+<p> URL: {{ livro.url }} </p>
 <p> Livro {{ livro | json }} </p>
 
+<br>
+<input type="text" [(ngModel)]="filtro" >
+<br>
+<input type="text" #novoValor>
+<button (click)="addCurso(novoValor.value)" > add curso </button>
+
+<p> {{ valueAssinc | async}} </p>
 
 
+<h2>pipe puro</h2>
+<ul>
+    <li *ngFor="let liv of livros | filtroArray: filtro">
+        {{ liv }}
+    </li>
+</ul>
+
+
+<h2>pipe impuro</h2>
+<ul>
+    <li *ngFor="let liv of livros | filtroArrayImpuro: filtro">
+        {{ liv }}
+    </li>
+</ul>
+
+<h2>sem pipe, no componente</h2>
+<ul>
+    <li *ngFor="let liv of filtrarLivros()">
+        {{ liv }}
+    </li>
+</ul>
+
+<br>
