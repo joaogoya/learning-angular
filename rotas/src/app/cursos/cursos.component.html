@@ -1,5 +1,9 @@
 <div class="collection">
-    <a class="collection-item" *ngFor="let curso of cursos" [routerLink]="['/curso', curso.id]">
-        {{ curso.nome }}
-    </a>
-  </div>
+  <a class="collection-item" *ngFor="let curso of cursos" [routerLink]="['/curso', curso.id]">
+    {{ curso.nome }}
+  </a>
+</div>
+<br>
+
+<p>Pagina: {{ pagina }} </p>
+<a (click)="aumentaPagina()" class="blue darken-4 waves-effect waves-light  btn">button</a>

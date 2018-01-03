@@ -951,6 +951,43 @@ aula 56
 ========= 
 	definindo e extraindo parametros da url
 
+	sobre rotas até aqui:
+		no app routing cria uma ocntante que recebe um array deonjetos
+		cada objeto tem dois atributos
+			path e o componente
+		
+		depois joga esse contante numa variavel que é exportada
+
+		no app coloca essa variavel no imports:[] e faz o import da app route la em cima
+
+===============================================================================
+aula 57
+========= 
+	modulo de rotas
+	aqui vai rolar um modulo p cada rota, aparentemente
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
