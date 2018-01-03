@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
-import { CursosService } from '../cursos/cursos.service';
+import { CursosService } from '../cursos.service';
 import { Router } from '@angular/router';
-
+ 
 
 @Component({
   selector: 'app-curso-detalhe',
@@ -14,7 +14,7 @@ export class CursoDetalheComponent implements OnInit {
 
   id:number;
   inscricao: Subscription;
-  nomeCurso:string;
+  nomeCurso:string; 
 
   constructor(
     private rota: ActivatedRoute, 
@@ -39,7 +39,7 @@ export class CursoDetalheComponent implements OnInit {
   }
   
   ngOnDestroy(){
-    this.inscricao.unsubscribe();
+    this.inscricao.unsubscribe(); 
   }
 
 }

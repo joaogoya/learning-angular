@@ -966,6 +966,25 @@ aula 57
 	modulo de rotas
 	aqui vai rolar um modulo p cada rota, aparentemente
 
+	é praticamente igual, tem poucas diferenças
+	mas é mais interessante pq com modulo agente exporta um modulo e nao uma constante 
+
+
+===============================================================================
+aula 58
+========= 
+	modulo de funcionalidade
+	ela poe a pasta curso detalhe dentro d pasta cursos, ecria um modulo pra eles
+
+
+===============================================================================
+aula 59
+========= 
+
+	modulo de rotas de funcionalidade
+
+
+
 
 
 
