@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
-import { CursosService } from '../cursos/cursos.service';
+import { CursosService } from '../cursos.service';
 import { Router } from '@angular/router';
  
 
-@Component({
+@Component({ 
   selector: 'app-curso-detalhe',
   templateUrl: './curso-detalhe.component.html',
   styleUrls: ['./curso-detalhe.component.css']
