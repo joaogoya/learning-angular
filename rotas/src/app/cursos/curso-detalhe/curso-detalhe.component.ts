@@ -4,7 +4,6 @@ import { Subscription } from 'rxjs/Subscription';
 import { CursosService } from '../cursos.service';
 import { Router } from '@angular/router';
  
-
 @Component({ 
   selector: 'app-curso-detalhe',
   templateUrl: './curso-detalhe.component.html',
