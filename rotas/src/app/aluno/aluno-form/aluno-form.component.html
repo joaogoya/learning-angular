@@ -1,3 +1,24 @@
-<p>
-  aluno-form works!
+<h5>Cadastrar/Editar aluno</h5>
+<!--p>
+  {{ aluno.id }}
 </p>
+<p>
+  {{ aluno.nome }}
+</p>
+<p>
+  {{ aluno.email }}
+</p-->
+<div class="row">
+  <div class="input-field col s12">
+    <input [(ngModel)]="aluno.id" disabled value="ID do aluno" id="id_aluno" type="text">
+    <label for="id_aluno" class="active">Id</label>
+  </div>
+  <div class="input-field col s12">
+    <input [(ngModel)]="aluno.nome" placeholder="Nome do aluno" id="Nome" type="text">
+    <label for="nome" class="active">Nome</label>
+  </div>
+  <div class="input-field col s12">
+    <input [(ngModel)]="aluno.email" placeholder="Email do aluno" id="email" type="text">
+    <label for="email" class="active">Email</label>
+  </div>
+</div>

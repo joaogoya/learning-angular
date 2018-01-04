@@ -5,11 +5,14 @@ import { AlunoComponent } from './aluno.component';
 import { AlunoFormComponent } from "./aluno-form/aluno-form.component";
 import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 import { AlunoRoutingModule } from "./aluno.routing.module";
+import { AlunoService } from './aluno.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     imports:[
         CommonModule,
-        AlunoRoutingModule
+        AlunoRoutingModule,
+        FormsModule        
     ],
     declarations:[
         AlunoComponent,
@@ -17,7 +20,7 @@ import { AlunoRoutingModule } from "./aluno.routing.module";
         AlunoDetalheComponent 
     ],
     exports:[],
-    providers:[]
+    providers:[AlunoService]
 })
 
 export class AlunosModule{}
