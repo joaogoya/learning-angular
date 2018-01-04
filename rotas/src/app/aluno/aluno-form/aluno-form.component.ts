@@ -5,9 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './aluno-form.component.html',
   styleUrls: ['./aluno-form.component.css']
 })
-export class AlunoFormComponent implements OnInit {
 
+export class AlunoFormComponent implements OnInit {
   constructor(){}
   ngOnInit() {}
-
 }
