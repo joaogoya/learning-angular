@@ -952,7 +952,7 @@ aula 56
 	definindo e extraindo parametros da url
 
 	sobre rotas até aqui:
-		no app routing cria uma ocntante que recebe um array deonjetos
+		no app routing cria uma cosntante que recebe um array de objetos
 		cada objeto tem dois atributos
 			path e o componente
 		
