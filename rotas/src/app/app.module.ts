@@ -6,11 +6,14 @@ import { TestesMaterializeComponent } from './testes-materialize/testes-material
 import { MaterializeModule } from "angular2-materialize";
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { CursosComponent } from './cursos/cursos.component';
-//import { routing } from './app.routing';
 import { AppRoutingModule } from './app.routing.module';
-import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
-import { CursosService } from './cursos/cursos.service';
+import { CursosModule } from './cursos/cursos.module';
+//import { CursosComponent } from './cursos/cursos.component';
+//import { routing } from './app.routing';
+
+//import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
+//import { CursosService } from './cursos/cursos.service';
+
 
 
 @NgModule({
@@ -19,16 +22,17 @@ import { CursosService } from './cursos/cursos.service';
     TestesMaterializeComponent,
     HomeComponent,
     LoginComponent,
-    CursosComponent,
-    CursoDetalheComponent
+    //CursosComponent,
+    //CursoDetalheComponent
   ],
   imports: [
     BrowserModule,
     MaterializeModule,
     //routing
-    AppRoutingModule
+    AppRoutingModule,
+    CursosModule
   ],
-  providers: [CursosService],
+  providers: [/*CursosService*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
