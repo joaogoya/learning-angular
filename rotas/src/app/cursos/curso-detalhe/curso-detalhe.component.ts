@@ -21,7 +21,6 @@ export class CursoDetalheComponent implements OnInit {
     private router: Router
     ) { 
     this.id = this.rota.snapshot.params['id'];
-    console.log(this.rota);
   }
 
   ngOnInit() { 
