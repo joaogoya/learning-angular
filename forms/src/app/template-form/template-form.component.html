@@ -1,0 +1,50 @@
+<div class="jumbotron">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+    <div class="form-group" [class.has-error]="nome.touched && !nome.valid" [class.has-feedback]="nome.touched && !nome.valid">
+      <label for="nome" class="control-label">
+        Nome
+      </label>
+      <input 
+        type="email" 
+        class="form-control" 
+        id="nome" 
+        aria-describedby="nome-help" 
+        placeholder="Nome aqui"
+        name="nome"
+        [(ngModel)]="user.nome"
+        required
+        #nome="ngModel"
+      >
+      <span  class="glyphicon glyphicon-remove form-control-feedback"></span>
+      <small *ngIf="nome.touched && !nome.valid" id="nome-help" class="alert-danger form-text text-muted" role="alert">
+          <b>CAMPO OBRIGATÓRIO</b>
+      </small>
+    </div>
+
+    <div class="form-group" [class.has-error]="email.touched && !email.valid" [class.has-feedback]="email.touched && !email.valid">
+      <label for="email" class="control-label" >
+        Email
+      </label>
+      <input 
+        type="email" 
+        class="form-control" 
+        id="email" 
+        placeholder="Email aqui" 
+        aria-describedby="email-help"
+        name="email"
+        [(ngModel)]="user.email"  
+        required
+        #email="ngModel"
+        email
+      >
+      <span  class="glyphicon glyphicon-remove form-control-feedback"></span>
+      <small *ngIf="email.touched && !email.valid" id="nome-help" class="alert-danger form-text text-muted" role="alert">
+        <b>INFORME UM EMAIL VÁLIDO</b>
+      </small>
+    </div>
+
+    <button [disabled]="!f.valid" type="submit" class="btn btn-default">
+      Submit
+    </button>
+  </form>
+</div>

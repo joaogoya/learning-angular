@@ -10,11 +10,11 @@
 </p-->
 <div class="row">
   <div class="input-field col s12">
-    <input [(ngModel)]="aluno.id" disabled value="ID do aluno" id="id_aluno" type="text">
+    <input [(ngModel)]="aluno.id" disabled value="ID do aluno" id="id_aluno" type="text" >
     <label for="id_aluno" class="active">Id</label>
   </div>
   <div class="input-field col s12">
-    <input [(ngModel)]="aluno.nome" placeholder="Nome do aluno" id="Nome" type="text">
+    <input [(ngModel)]="aluno.nome" placeholder="Nome do aluno" id="Nome" type="text" (input)="onInput()" >
     <label for="nome" class="active">Nome</label>
   </div>
   <div class="input-field col s12">

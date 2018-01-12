@@ -920,45 +920,100 @@ aula 50
 	rota simples
 	criamos um arquivo de rotas
 
+	cursos - 3 componentes
+	nessa aula ela cria o app.routing ts	
+		o arquivo que ela faz e exporta uma constante com as rotas
+	
+	tem que importar o router e o router module le am cima. Os dois sao do @angular/router
+	tem q impirtar o ModuleWithProviders la em cia, que é do angular core
+	importa os coponentes q vao ser roteados
+
+	a constante é do tipo router, e recebe um array de obejto com path e o componente que ele aponta
+
+	depois ela cria uma segunda constante 
+		(q ela chamou de routing), do tipo ModuleWithProviders 
+		recebe um routerModule.forroot(Nome_da_constante_do_array_de_objetos)
+		essa constante, router é que é exportada, levando a constante do array como parametro
+
+	vai no modulo e importa o arquivo approuting la em cima  e coloca ele nos imports
+
+	vai no html e poae um <router-outlet>
+
+
 ===============================================================================
 aula 51
 =========
 	rotas no template
 
+	no link coloca um routerlink="path_definido_no_app.routing"
+
 ===============================================================================
 aula 52
 =========
 	css na rota ativa
+	no link (<a> </a>), ou inves do class activ, coloca routerlinkactive
 
 ===============================================================================
 aula 53
 =========
 	definindo e extraindo parametros das rotas
 
+	no arquivo de rotas, onde tem o path, component
+	mp path bota a rota e o ideia
+	path: 'rota/:id', componente: componenteQueDeveAbrir
+	no html, no routerLink, faz o seguinte:
+	[routerLink]="['rota', parametro]"
+	<a [routerLink]="['curso_detalhe', curso.id]"
+	se foram varios parametros	
+		[routerLink]="['curso_detalhe', curso.id, curso.no, .... ]"
+		
+	pra pegar os parametros no componete q foi apontedo:
+	tipo, no curso detalhe faz o seguinte:
+		existe uma classe do angular 2 chamada de activateRoute
+		injeta ela no construtor e importa la am cima
+		
+		o paremntro vem dentro do snapshot (paramas)
+		
+		mas tem q abrir um monte de coisa
+		
+		this.id = router.spashoot.params['id']
+		
+	qd coloco o id na mao, la na url funciona.
+	mas qd clico no link nao rolar
+	talvez tenha q escutar as mudanças na url
+
 ===============================================================================
 aula 54
 =========
 	Escutando mudanças nos parâmetros de roteamento
-
+	
+	da maneira q foi feito, a gente obtem o id no construtor, ou seja, qd a classe é inicializada
+	e com o snapshoot, a gente tem apenas a foto da primeira rota
+	
+	se der um cnosole log no this.route
+	da p ver q ele tem um params, que é um behavorSubject
+	esse behavor subject é do rrjs e significa que é um valor q pode mudar com o tempo, e o valor do parametro aqui dentro vai mudando
+	da p se inscrever e ficar escutando esse behavor subject
+	
+	this.route.params.subscribe(
+		(params: any) => {
+			this.id = params['id ']
+		}
+	)
 
 ===============================================================================
 aula 55
 ========= 	
 	rotas imperativas
+	é qd da um redirect no component
 
 ===============================================================================
 aula 56
 ========= 
 	definindo e extraindo parametros da url
-
-	sobre rotas até aqui:
-		no app routing cria uma cosntante que recebe um array de objetos
-		cada objeto tem dois atributos
-			path e o componente
 		
-		depois joga esse contante numa variavel que é exportada
-
-		no app coloca essa variavel no imports:[] e faz o import da app route la em cima
+		query parameters
+		
 
 ===============================================================================
 aula 57
@@ -987,86 +1042,340 @@ aula 59
 aula 60
 ========= 
 	rotas filhas
+	é igual ao de funcionalidade, mas bota o parametro children e as filhas ali dentro
 	
 ===============================================================================
 aula 61
 ========= 
 	rotas filhas e criação das telas
+	ver como aponta prs filhas, assim como ta só funcionam colocando os ids na mao, na url 
+	
+	precisamos escutar qd o usuario clica no outor bt
+	
+	actiate route e subscribe
+
+
+===============================================================================
+aula 62
+========= 
+
+lazy load
+
+sempre organizar a aplicação em modulos
+	modularização
+
+as configurações sao feitas no approutingmodule principal, e nao nos approutings dos modulos
+	por exemplo, o ap lista e compartilhadas
+	tem o app routing da aplicação, que roteia p componetes:
+		novo, totais, .....
+
+	e tem tb o app routing listas
+		que roteia os componetes do modulo de listas
+
+	entao, se ligar q o lazy load se trabalha no app routing principal da aplicação, e noa nos approutings "filhos"
+	isso posto, o que fazemos é o seguinte:
+		adicionamos um path que indica qual o "endereço" a ser carregado, a aponta para o seu modulo
+			tipo	
+			no app lista de compras 
+				tem a pasta listas, com o modulo de listas e o approuting de listas
+				vamos supor que o editar lista esteja roteado assim:
+					{ path: 'edit', component: NomeComponente }
+					
+			passo 1
+			pra dizer pra a aplicação que ele tem q ser carregado, vamos no approuting principal da aplicação,
+			e colocamos mais um path
+				{ path:'caminho_q_foi_configurado_seu_appRouting', loadChildren: caminho_do_modulo_da_pasta/nomeArquivo#NomeClasse }
+				então, se quisessemos crregar o edit, ficaria mais ou manos assim:
+				{ path:'edit', app/listas/listas-Modulo#ListasModule }
+				se ligar q agente o modulo, e nao o approuting
+
+			passo 2
+			deois de colocar o path, tem que tirar o import do modulo filho no modulo principal
+				tipo, 
+				se formos fazer o load do modulo de listas, temos que tirar o import dele la do app module
+					tirar do imports:[], e tirar la em cima tb
+
+			passo 3
+				ir no approuting filho e deixar o path em branco
+				nao apaga toda a linha do path.
+				apaga só o caminho
+				era assim:
+					{ path:'edit', app/listas/listas-Modulo#ListasModule }
+				fica assim:
+					{ path:'', app/listas/listas-Modulo#ListasModule }
+
+			observar:
+				qd fiemos o lazyload do cursos, a aplicação "mudou o enderço"
+				tipo, se colocmos cursos no approuting, temos q fazer um refectorin e colocar cursos em tudo
+
+
+			pro angular, agente nao precisa informar o caminho da pasta, ele acha, mas o lazy load nao
+			por isso temos q informar
+
+
+			esses, acima, sao os tres passos p trabalhar o lazyload de modulos sem rotas filhas
+			com rotas filhas é o seguinte:
+
+				passo 1
+					repete o path no approuting module
+					{ path:'alunos', loadChildren: 'app/aluno/aluno.module#alunoModule' },
+
+				passo 2 
+					remove os imports no appModule
+				
+				passo 3
+					vai no routnig modulo de alunos e deixa o path vazio
+					{path: '', component: componenteDeAlunos}
 
 
 
+===============================================================================
+aula 63
+========= 
+	fom login
+
+	monta o html do form
+
+	manda as infos do user p serem validadas na classe de serviço
+	na real isso é server side, mas aqui no curo ta na mao, na classe de serviço
+
+	se o usuario for validado, faz um broadcast
+	emite um event
+
+	no app component, da um subscribe p escutar.
+	nesse subscribe trata a exibição do menu
 
 
 
+===============================================================================
+aula 64
+========= 
+	usando guarda de rotas
+	ver se o usuario pode acessar essa ou aquela rota
+
+	tipo o menu
+		se o user nao ta logado, o menu nao aparece
+		mas se o usuario colocar alguma rota na url, o compoente é carregado
+		o guarda rota impede isso
+		se o usuario nao tem acesso, a rota nao carrega
+
+	os guardas de rotas nao tem uma pasta especifica para serem criados.
+	pode ser em qq pasta
+	mas por boa pratica a comunidade angular cria uma pasta guard e bota eles ali
+
+	cria um servico dentro da pasta e renomeia p tirar o .service
+	fica só um arquivo ts
+
+	implementa a classe canActivate
+	implementa o metod canActivate	
+	ele recebe os parametros:
+		a propria rota, que é um activate route snapshot - tem q ser importado la em cima
+		o segunto é o state, que é um route State Snapshot 
+
+		e esse metodo retorna um observable ou um promise
+		aqui vamos retonrnar um observable do tipo boolean, pra dizer se o user pode ou nao acessar a rota	
+			esse observable nao é entre as chaves, é entre o parenteses e a chaves
+			metodo (){nao é aqui}
+			metodo(parametros) :é aqui {do sonthing}
+
+		E dentro das chaves é que vamos implementar a oogica p ver se o user pode acessar a rota ou nao
+			nesse projeto, no coponente de login, ja tem uma classe de servico
+			e nela ja tem um metodo que autentica o user
+
+			vamos usar isso p ganhar tempo
+			na classe de serviço criamos um metodo que rerona o estado do usuario
+			retorna se ele ta autenticado ou nao
+
+			no ath guard injeta esse servico p trabalhar com esse metodo
+
+			buscamos o estado do usuario
+				se estiver autenticado, passa, se nao, vai p home
+
+
+			depois q o auth guard ta pronto, vamos para os arquivos de rotas implementar os guardas de rota 
+			no path, a gente poe mais um atributo
+				era assim:
+				{ path: 'lorem', component: LoremComponent }
+
+				fica assim:
+				{ path: 'lorem', component: LoremComponent, canActivate[arquivoGuardadeRota] }
+
+				
+				{ path: 'cursos', loadChildren: 'app/cursos/cursos.module#CursosModule', canActivate[athGuard] },
+
+			colocamos o guarda nas rotas q a gente quer guardar
+			importa o athGurad la em cima
+			
+			e como ultimo passo, no appmodule, colocamos ele como provider pra toda aplicação poder acessar.
+			
+===============================================================================
+aula 65
+========= 
+	can activate child
+
+	cia um novo arquivo de rota, p cursos guard
+	implementa o canactivatechild
+	importa la em cima
+
+	cria o metodo (assinatura de interface)
+
+	no appmodule coloca o cursoguard como provider
+
+	no app routing coloca o gurdChild no path
+
+	no curso guar, cria a logica necessaria p bloquear/liberar acesso
+	nesse caso vamos trabalhr com os objets state e route
+
+	qaundo for guarda rota filhas, o can activate pode ser colocado no approuting principal, ou no 
+	app routing da pasta filha. Depnde de como queremos que o sistema se comporte, mas funciona nos dois.
+
+
+===============================================================================
+aula 66
+========= 
+	can deactivate
+
+	cria um ts na pasta guard
+
+	pro deactivate tem q informar qual é o componente, mas fora isso, é igual ao activate
+	depois coloca ele como provider em algum modulo
+		se quiser que toda aplicação tenha acesso, coloca no app.module
+		se quiser uma outra pasta apenas tenham acesso, coloca no modulo da pasta
+		Nesse caso, como é um deactivate para alunos, vai ficar no modulo da pasta alunos
+		No modulo de rotas, colocar o deactivate, mas se ligar no escpo
+			como o deactivate aluno ta no modulo alunos, ele tem que ser trabalhado no app.routing da pasta alunos
 
 
 
+===============================================================================
+aula 67
+========= 
+	guarda rota - canDeactivat
 
 
+===============================================================================
+aula 68
+========= 
+	resolve - carrega dados antes da rota ser ativada
+
+===============================================================================
+aula 69
+========= 
+	canLoad - nao carrega o compoente se u user nao tiver permissao
 
 
+===============================================================================
+aula 70
+========= 
+	rota padrao e rota nao encontrada
+
+===============================================================================
+aula 71
+========= 
+	url com has ou estilo html5
+
+===============================================================================
+aula 72
+=========
+	forms
+	template vs data
 
 
+===============================================================================
+aula 73
+=========	
+	cria um projeto novo
+	instala o bootstrap
+	roteia
+	e cria as tags html de um form
 
+===============================================================================
+aula 74
+=========
+	ngform, ngSubmit e ngModel
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-		
-		
 	
 
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

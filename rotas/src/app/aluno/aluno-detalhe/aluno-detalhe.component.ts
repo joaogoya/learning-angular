@@ -16,7 +16,6 @@ export class AlunoDetalheComponent implements OnInit {
    id: any;
 
   constructor( private rota: ActivatedRoute, private alunoService: AlunoService, private router: Router) {
-
   }
 
   ngOnInit() {
@@ -27,6 +26,7 @@ export class AlunoDetalheComponent implements OnInit {
         this.aluno = this.alunoService.getAlunoById(this.id);
       }
     );
+    console.log('aluno fomr');
   }
 
   ngOnDestroy(){
@@ -35,6 +35,7 @@ export class AlunoDetalheComponent implements OnInit {
 
   editarAluno(){
     this.router.navigate(['/aluno', this.aluno.id, 'edit'])
+    localStorage.setItem('aluno', this.aluno );
   }
 
 }

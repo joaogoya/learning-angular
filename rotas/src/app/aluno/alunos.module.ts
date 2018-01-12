@@ -1,3 +1,4 @@
+
 import { NgModule } from "@angular/core";
 
 import { CommonModule } from "@angular/common";
@@ -20,7 +21,9 @@ import { FormsModule } from '@angular/forms';
         AlunoDetalheComponent 
     ],
     exports:[],
-    providers:[AlunoService]
+    providers:[
+        AlunoService,
+    ]
 })
 
 export class AlunosModule{}

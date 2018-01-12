@@ -15,6 +15,7 @@ export class AlunoFormComponent implements OnInit {
   aluno: any = {};
   inscricao: Subscription;
   id:any;
+  alteracaoForm: boolean = false;
 
   constructor( private rota: ActivatedRoute, private alunoService: AlunoService ){}
   ngOnInit() {
@@ -33,5 +34,10 @@ export class AlunoFormComponent implements OnInit {
 
   ngOnDestroy(){
     this.inscricao.unsubscribe();
+  }
+
+  onInput(){
+      this.alteracaoForm = true;
+      //console.log('mudou');
   }
 }
