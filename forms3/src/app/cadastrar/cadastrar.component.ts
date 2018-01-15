@@ -1,4 +1,6 @@
+import { Usuario } from './../../../../rotas/src/app/login/usuario';
 import { Component, OnInit } from '@angular/core';
+import { User } from './user';
 
 @Component({
   selector: 'app-cadastrar',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarComponent implements OnInit {
 
-  constructor() { }
+  private user: User = new User;
 
-  ngOnInit() {
+  constructor() { 
+    this.user.nome='joao';
+    this.user.email = "a@b.com"
+  }
+
+  ngOnInit() {}
+
+  onSubmit(form){
+    console.log(form);
+    console.log(this.user.nome);
   }
 
 }

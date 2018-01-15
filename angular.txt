@@ -1294,7 +1294,65 @@ aula 74
 =========
 	ngform, ngSubmit e ngModel
 
+	na tag <form>
+		coloca uma variavel "recebenco" um ngForm
+		<form #variavel="ngForm"
+
+		assim agete diz p angular q isso é um form q ele tem q gerenciar
+
+		o ngForm pertence ao FormsModule do @angular/forms
+		entao, sempre q for utilizar, fazer o import dele no modulo
+
+	para submeter o form:
+		or form ja te um bt de submit
+		pra sizerp angular submeter ´o seguinte:
+		existe um evento do agngular que é o ngSubmit
+		é o tipo o click, sao eventos
+
+		e como todos os eb=ventos da p fazer um event binding:
+			(evento)="metodo()"
+			(ngSubmit)="eviaForm()", por exemplo
+
+===============================================================================
+aula 75
+=========
+	para associarcada campo de input do form com o ngModel:
+		vai no input, coloca o atributo name 
+		e coloca um ngModel
+		<input class="" id"" placeholder="" name"nome_escolhido" ngModel />
+
+	pra trabalhar com ngModel, tem q importar o formsModel no modulo da aplicação
+
+	no template component seta valores de nome e email pro user
+
+	no html, no input:
+		da um ngmodel="user.nome"
+			nao buga, mas printa errado
+		da um [ngModel]="user.nome" - propety binding
+			printa certo, mas qd trocamos o nome no html, ele nao atualiza o obj no component
+		da um [(ngModel)]="user.nome"
+			printa certo e atualiza a entidade
+		
+		obs: p lembrar inicio do curso
+			() - event bindigng
+			[] - property biding
+			[()] - two away data binding
+
+===============================================================================
+aula 76
+=========
+	ela cria um modulo e um routing p o form
+	e mostra q sem o forms module nao funciona
+
+===============================================================================
+aula 77
+=========
+	validação nos campos
 	
+	required do html nos inputs
+
+	pra saber quias as validações que podem ser utilizadas ela vai na documentação.
+
 
 
 
