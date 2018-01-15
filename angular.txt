@@ -621,7 +621,6 @@ aula 23
 ===============================================================================
 aula 24
 =========
-
 	diretivas
 		diretivas estruturais
 			modificam o dom (HTML)
@@ -1351,7 +1350,50 @@ aula 77
 	
 	required do html nos inputs
 
-	pra saber quias as validações que podem ser utilizadas ela vai na documentação.
+	pra saber quias as validações que podem ser utilizadas ela vai na documentação e pesquisa por validadtor
+	o site da doc mostra as validações q tem
+
+	ela fala dos validators, dai vai p doc do angular 2 e fala dos validators
+	e diz uma das diferenças do 2 pro 4, nas validações, é o email validators
+
+	ea mostra como fazerum regex nmao p validar campo de email, pro angullar 2
+
+	a partir do 4, da p usar a diretva email, e dexar p o agular aplicar o regex de email
+
+	no final ela faça das vlidações do site the art of the web
+
+
+===============================================================================
+aula 78
+=========
+	css na validação dos campos
+	borda vermelha utilizando as classes q o angular cria
+
+	tem validações do bootstrap (ou framework q estiver utilizando - materia, matirialize,...) e do proprio angular
+
+	abre o dev tools e mostra q oangular criou classes pros campos
+		
+		class .............................. sim           nao
+		visitado: .......................... ng-touched    ng-untouched
+		valor mudou: ....................... ng-dirty      ng-pristyne
+		esta valido ........................ ng-valid      ng-invalid
+
+	ela cria uma variavel no input nome e faz as classes q o input assume estourarem na tela pra explicar melhor o qq é cada uma delas
+
+	com isso, ela mosra q ja da p fazer alteração de cores. Tipo, só com essas classes
+
+
+===============================================================================
+aula 79
+=========
+	mostrando mensagem de ero p usuario
+
+
+
+
+
+
+
 
 
 

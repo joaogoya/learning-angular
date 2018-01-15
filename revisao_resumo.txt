@@ -1,0 +1,91 @@
+INTRODUÇÃO 
+DATABINDING
+ANGULAR CLI
+DIRETIVAS
+SERVIÇOS
+PIPES
+ROTAS
+FORMULARIOS
+
+
+********************************************************************************************
+                        ..::!! INTODUÇÃO !!::..
+********************************************************************************************
+
+	= aula 1
+	=========
+		apresentação e overwiew
+
+
+	= aula 2
+	=========
+		ambiente:
+		
+		via terminal:
+			1 - instala o node na maquina
+			2 - instala o angular cli - npm install -g@angular/cli	
+			3 - instala o typescript - npm install -g typescript 
+			4 - instala vs code
+
+	= aula 3
+	=========
+		primeira aplicação
+		
+		
+	aula 4
+	=======
+		typescript
+		cria um arquivo .ts
+		no terminal, da um tsc main.ts
+		isso faz o angular compilar o arquivo
+		depois um ovwerwiew de ts
+
+	aula 5
+	========
+		modulos
+		
+	aula 6
+	=======
+		templates
+		
+	aula 7
+	=======
+		Classes de serviços e injeções de dependencias
+		
+	aula 8
+	========
+		plugins p editres de texto
+	
+********************************************************************************************
+                        ..::!! DATABINDING !!::..
+********************************************************************************************
+	
+	aula 9
+	========
+		property dinding
+		mandar infos do componente para o templates atarves de uma propriedade html
+		<img src="endereco da imagem"
+		<img [src]="variavel_que_recebe_endereco"
+
+	aula 10
+	========
+		class e stylebinding
+		sao maneiras de se trabalhar ocm o property binding
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	
