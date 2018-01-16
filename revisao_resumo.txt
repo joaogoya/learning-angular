@@ -7,7 +7,6 @@ PIPES
 ROTAS
 FORMULARIOS
 
-
 ********************************************************************************************
                         ..::!! INTODUÇÃO !!::..
 ********************************************************************************************
@@ -15,7 +14,6 @@ FORMULARIOS
 	= aula 1
 	=========
 		apresentação e overwiew
-
 
 	= aula 2
 	=========
@@ -31,7 +29,6 @@ FORMULARIOS
 	=========
 		primeira aplicação
 		
-		
 	aula 4
 	=======
 		typescript
@@ -41,7 +38,7 @@ FORMULARIOS
 		depois um ovwerwiew de ts
 
 	aula 5
-	========
+	=======
 		modulos
 		
 	aula 6
@@ -55,7 +52,7 @@ FORMULARIOS
 	aula 8
 	========
 		plugins p editres de texto
-	
+			
 ********************************************************************************************
                         ..::!! DATABINDING !!::..
 ********************************************************************************************
@@ -66,26 +63,298 @@ FORMULARIOS
 		mandar infos do componente para o templates atarves de uma propriedade html
 		<img src="endereco da imagem"
 		<img [src]="variavel_que_recebe_endereco"
+		uma propriedade recebe uma variavel
 
 	aula 10
 	========
-		class e stylebinding
+		class e style binding
 		sao maneiras de se trabalhar ocm o property binding
 
+	= aula 11
+	===========
+		event binding - ()=
+		um evento dispara um metodo
+		
+	= aula 12
+	==========
+		two away databinding
+		a comunicação se da nos dois sentidos
+		do template pro componente e do componente pro template
+		lembrar user q ssetava o input
+		e qd alteravamos o value, o input alterava o obj no componente
+
+	= aula 13
+	===========
+		reutilização de componentes
+		utilizar no comp B, infos do comp A
+		ta explicado no vs code, mas da p fixar melhor
+		
+	= aula 14
+	===========
+		fazer um evento no componente A de uma meneira q o componete B possa capturar e tb possa desenvolver alguma logica em cima
+		tb da p praticar mias
+		
+	= aula 15
+	===========
+		ciclo de vida dos componentes
+		funçoes padrao que sao disparadas pelo angular
+		onIniti, OnDestroy,...
+		elas podem ser utilizadas p trabalhar alguma logica
+		
+	= aula 16
+	===========	
+		wiew child - acesso ao dom
+		é pra qd criamos uma variavel no html, tipo, #variavel
+		podermos trabalhar com ela no component
+		@wiewChild ('variavelQueTaNoHtml') variavelUtilizadaNoComponent: qqTipo;
+		tb da p praticar
 	
+********************************************************************************************
+                        ..::!! ANGULAR CLI !!::..
+********************************************************************************************	
 	
+	= aula 17
+	==========
+		criar projetos e ng serve com angular cli
+		
+	= aula 18
+	===========	
+		como criar componentes e classe de servico
 	
+	= aula 19
+	===========
+		pre processadores css
+		qd criar o projeto ja avisa qual o pre processado q vai ser utilizado
+			ng new nome-do-projeto --less
+		
+		tb da p pegar projetos ja existentes, q estao com css nativos e mudar p pre processadores
+			ng set defaults.styleExt less
+		
+	= aula 20
+	==========
+		ng lint, ng test e ng e2e
+		o que é cada arquivo desse
+		
+	= aula 21
+	===========
+		explica tudo q o angular cli cria qd criamos um projeto
+		
 	
+	= aula 22
+	==========
+		gerando builds
+		da p fixar melhor
 	
+	= aula 23
+	==========
+		instalação de bibliotecas externas
+		bootstrap, jq, material, materialize, .....
+		
+********************************************************************************************
+                        ..::!! DIRETIVAS !!::..
+********************************************************************************************			
+		
+	= aula 24
+	==========
+		introdução a diretivas
 	
+	= aula 25
+	==========
+		ngIf
+		
+	= aula 26
+	===========
+		ng switch
+		
+	= aula 27
+	==========
+		ng for
+		
+	= aula 28
+	===========
+		<template> e uso do *
 	
+	= aula 29  
+	===========
+		diretiva ngClass
+		
+	= aula 30
+	===========
+		diretiva ng style
+
+	= aula 31
+	===========
+		Operador ?
+
+	= aula 32
+	===========
+		ng content
+		
+	= aula 33
+	===========
+		criando diretivas
+		
+	= aula 34
+	===========
+		hostListern
+		hostbinder
+
+		escutar eventos em elementos cm diretivas customizadas
 	
+	= aula 35
+	===========
+		diretivas de @input e property biding
+		
+	= aula 36
+	==========
+		diretivas estruturais
+		modificam o template
+		
+********************************************************************************************
+                        ..::!! SERVIÇOS !!::..
+********************************************************************************************	
 	
+	= aula 37
+	==========
+		introdução á serviços
+		
+	= aula 38
+	==========
+		primeiro serviços
+		
+	= aula 39
+	==========
+		injeção de dependenia
+		
+	= aula 40
+	===========
+		single injectio e varias instancias
+		dois componentes utilizam o mesmo servico
+		
+	= aula 41
+	===========
+		broadcast de eventos
+		fazeer o componente A escutar um evento no componente B utilizando o serviço
+		
+		
+	= aula 42
+	==========
+		injetar um serviço dentro do outro
+		instanciar um serv dentro do outro na real
 	
-	
-	
-	
-	
+********************************************************************************************
+                        ..::!! PIPES !!::..
+********************************************************************************************	
+		
+		= aula 43
+		===========
+			introdução
+			
+		= aula 44
+		==========
+			criando um pipe
+			ng g p nome-do-pipe
+		
+		= aula 45
+		===========
+			aplicando locale nos pipes
+			nos projetos na real, mas ela apresenta isso com os pipes
+			
+		= aulas 46 e 47
+		=================
+			pipes puros e pipes impuros
+			
+		= aula 48
+		==========
+			pipe assincrono
+		
+********************************************************************************************
+                        ..::!! ROTAS !!::..
+********************************************************************************************		
 
 
+
+
+
+
+
+
+
+
+
+
+
+********************************************************************************************
+                        ..::!! FECHAMENTO !!::..
+********************************************************************************************
+
+Novo projeto:
+	via terminal:
+		1 - instala o node na maquina
+		2 - instala o angular cli - npm install -g@angular/cli	
+		3 - instala o typescript - npm install -g typescript 
+		4 - instala vs code
+		
+data binding
+	ok
+	property, event, twoaway
+	reutilização de componentes
+		utilizar no comp B, infos do comp A
 	
+	fixar
+	output propriet - fazer um componente escutar eventos do outro
+	ciclo de vida
+	wiewchild
+	
+angular cli
+	pre processadores css
+		ng new nome-do-projeto --less
+	builds de projetos
+	
+
+diretivas
+	ok
+	if, switch, for, *, <template> e ? (elvis)
+
+	fixar
+	ng class, ng style, ng content, criar diretivas, hostlistner e hostbinder, diretivas de @input e property biding
+	
+serviços
+	ta ok
+	injeção de dependenia
+	
+	single injectio e varias instancias
+		dois componentes utilizam o mesmo servico
+	
+	broadcast de eventos
+		fazeer o componente A escutar um evento no componente B utilizando o serviço
+	
+	injetar um serviço dentro do outro
+		instanciar um serv dentro do outro na real
+
+pipes
+	é simples e ta ok
+	locale, pipes puros, impuros e assincronos
+
+rotas
+	ta ok, e é mais recente
+	
+forms
+	to fazendo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

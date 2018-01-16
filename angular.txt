@@ -327,7 +327,7 @@ aula 07
 
 	Serviços:
 		nao é boa pratica colocar as requisições e "comunicaççao" com o servidor no componente.
-		no componente colocamos apenas o q os usuarios podem ter acesso
+		no componen te colocamos apenas o q os usuarios podem ter acesso
 		para comunicar com servidor criamos uma classe de serviço
 		vou criar serviços no projeto tres pra nao ter q criar outro projeto
 
@@ -486,6 +486,25 @@ aula 13
 	fiz os componentes porta, e radio pra preticar isso
 
 
+
+	utilizar no copomente B, informações do componente A
+	pega o seletor do componente B e coloca no componente A
+		ao inves de colocar no app component, coloca no componente A
+
+	no componente A, cria uma variavel, tipo noCurso
+
+	vai no html do componente A, e faz um property bibdin dessa variavel
+	tipo <app-component-B [propriadade_qualquer]="variavel_componente_A"> </app-component-B>
+	<app-component-B [nome]="nomeCurso"> </app-component-B>
+	no componente B, declara uma variavel com o nome da propriedade, mas tem q ser com @Input(), e, por parametro, a gente passa a propriedade q foi criada
+	@Input('parametro') variavel:tipo
+	@Input('nome') umaVariavelQualquer: string;
+	assim o componente B pega uma info do A
+	o cara reutiliza do componente A, no B
+	dae, da pra trabalhar com as informações do comp A no comp B, seja com interpolação, propetybing, ou o q for
+	tudo o q estiver no A a gente pode puxar pro B
+
+
 ===============================================================================
 aula 14
 =========		
@@ -505,6 +524,7 @@ aula 15
 
 	o angular tem varios eventos "defaullt", como o onInit
 	essa aula ela apreseta eles
+
 	pra essa aula vou criar um novo projeto, o ciclo
 
 ===============================================================================
@@ -514,7 +534,8 @@ aula 16
 	projeto carro
 	uma outra maneira de referenciar elementos do html 
 	ViewChild pelo que eu entendi não é, necessariamente, para ver um componente filho
-	mas sim, uma maneira de o componente ver o seu proprio html
+	mas sim, uma maneira de o componente ver o seu proprio htm
+	@wiewChild ('variavelQueTaNoHtml') variavelUtilizadaNoComponent: qqTipo; 
 
 ===============================================================================
 aula 17
@@ -587,7 +608,9 @@ aula 22
 
 		prod é ng build --proj
 
-	ad aus builds geram os mesmos arquivos, a diferença é q na build de prod ainda nao ta minificado, anda tem as variaveis,...
+	ad aus builds geram os mesmos arquivos, a diferença é q na build de prod ainda nao ta minificado, 
+	anda tem as variaveis,...
+
 	e na prod é tudo compilado e minificado
 	a buid de dev é mais legivel para humanos
 
@@ -596,7 +619,8 @@ aula 22
 		https://www.npmjs.com/package/http-server 	
 		npm install http-server -g
 
-		com o servidor instalado, depois de dar a build, da um http serve e versao de produção vai ser servida no browser
+		com o servidor instalado, depois de dar a build, da um http serve e versao de produção vai ser 
+		servida no browser
 
 ===============================================================================
 aula 23
