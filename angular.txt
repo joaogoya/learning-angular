@@ -1015,7 +1015,9 @@ aula 54
 	
 	se der um cnosole log no this.route
 	da p ver q ele tem um params, que é um behavorSubject
-	esse behavor subject é do rrjs e significa que é um valor q pode mudar com o tempo, e o valor do parametro aqui dentro vai mudando
+	esse behavor subject é do rxjs e significa que é um valor q pode mudar com o tempo, e o valor do parametro 
+	aqui dentro vai mudando
+	
 	da p se inscrever e ficar escutando esse behavor subject
 	
 	this.route.params.subscribe(
@@ -1035,7 +1037,7 @@ aula 56
 ========= 
 	definindo e extraindo parametros da url
 		
-		query parameters
+	query parameters
 		
 
 ===============================================================================
@@ -1052,14 +1054,12 @@ aula 57
 aula 58
 ========= 
 	modulo de funcionalidade
-	ela poe a pasta curso detalhe dentro d pasta cursos, ecria um modulo pra eles
-
+	ela poe a pasta curso detalhe dentro da pasta cursos, e cria um modulo pra eles
 
 ===============================================================================
 aula 59
 ========= 
 	modulo de rotas de funcionalidade
-
 
 ===============================================================================
 aula 60
@@ -1410,7 +1410,7 @@ aula 78
 ===============================================================================
 aula 79
 =========
-	mostrando mensagem de ero p usuario
+	mostrando mensagem de erro p usuario
 
 
 

@@ -271,6 +271,160 @@ FORMULARIOS
 ********************************************************************************************
                         ..::!! ROTAS !!::..
 ********************************************************************************************		
+	
+	= aula 49
+	==========
+		introdução
+		spa e como a rota faz isso
+		
+	= aulas 50 e 51
+	=================
+		rotas simples
+		é a aula que ela faz as rotas num arquivo.ts e nao um .routing.ts
+		
+		passo a passo:
+		
+			1 - importar la em cima:
+				Router 
+				router module 
+					Os dois sao do @angular/router
+				
+				ModuleWithProviders, é do angular core
+				
+				Os coponentes q vao ser roteados
+		
+			2 - Cria uma constante é do tipo router, e recebe um array de obejto com path e o componente que ele aponta
+			
+			3 - tres passos:
+				cria uma segunda constante (segundaConstante) do tipo ModuleWithProviders 
+				Essa const recebe um routerModule.forroot(Nome_da_constante_do_array_de_objetos)
+				essa constante, segundaConstante é que é exportada, levando a constante do array como parametro
+			
+			4 - vai no modulo e importa o arquivo approuting la em cima  e coloca ele nos imports
+			
+			5 - vai no html e poae um <router-outlet>
+			
+			6 - No template, ao inves do href, coloca um routerlink="path_definido_na_rota"
+	
+	= aula 52
+	==========	
+		css na rota ativa - routerlinkactive
+		
+	= aula 53 e 54
+	================
+		extraindo parametros das rotas
+		
+		passo a passo:
+			1 - poem o parametro no path da rota, usando dois pontos :
+				path:'/cursos/:id'
+			
+			2 - no template:
+				faz um property binding no router link p a propriedade recebe um array com a rota e o parametro
+				[routerLink]="['rota', parametro]"
+				[routerLink]="['curos', id]"
+			
+			3 - no componente, precisamos pegar os parametros que foram passados
+				
+				3.1 existe uma classe do angular 2 chamada de activateRoute
+					injeta ela no construtor e importa la am cima
+		
+				3.2 - this.id = router.spashoot.params['id'] 
+					o paremntro vem dentro do snapshot (paramas)
+					
+					qd coloco o id na mao, la na url funciona.
+					mas qd clico no link nao rolar
+					talvez tenha q escutar as mudanças na url
+
+				3.3 - Escutando mudanças nos parâmetros de roteamento:
+					se der um conosole log no this.route
+					da p ver q ele tem um params, que é um behavorSubject
+					esse behavor subject é do rxjs e significa que é um valor q pode mudar com o tempo, e o valor do parametro 
+					aqui dentro vai mudando
+					
+					da p se inscrever e ficar escutando esse behavor subject
+					
+					this.route.params.subscribe(
+						(params: any) => {
+							this.id = params['id ']
+						}
+					)
+			
+	= aula 55
+	===========
+		rotas imperativas
+		é qd da um redirect no componente
+		this.router.navigate(['path da rota'])
+		
+	= aula 56
+	===========
+		definindo e extraindo parametros da url
+		query parameters
+		uma outra maneira de pegar os parametros
+		
+	= aula 57
+	===========
+		modulo de rota
+		é a qula que ela leva do .ts pro .touting.ts
+		
+	= aula 58
+	==========
+		ela cria ma pasta curso detalhe, e cri um modulo de funcionalidade p ele
+			
+	= aula 59
+	===========
+		modulo de rota (.routing) de funcionalidade
+		da p fixar melhor
+	
+	= aula 60
+	===========
+		rotas filhas
+		da p fixar melhor
+		
+	= aula 61
+	===========
+		rotas filhas e criação das telas
+		ver como aponta pras filhas, assim como ta só funcionam colocando os ids na mao, na url 
+		
+		precisamos escutar qd o usuario clica no outor bt
+		
+		actiate route e subscribe
+		
+		da pra revisar
+
+	= aula 62
+	===========
+		lazy load
+		carregamento por demanda
+		
+		quem "carrega" os componentes e templates sao os modulos
+		para trabalhar com carregamento por demananda passamos isso para o routing
+		é o routing e nao mais o modulo que carrega os componentes
+		
+		e para fazer isso existe um extenso passo a passo:
+			
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
