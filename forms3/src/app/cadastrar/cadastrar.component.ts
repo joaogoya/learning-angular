@@ -11,14 +11,14 @@ export class CadastrarComponent implements OnInit {
 
   private user: User = new User;
 
-  constructor() { 
-    this.user.nome='joao';
-    this.user.email = "a@b.com"
+  constructor() {
+    this.user.nome = 'joao';
+    this.user.email = 'a@b.com';
   }
 
   ngOnInit() {}
 
-  onSubmit(form){
+  onSubmit(form) {
     console.log(form);
     console.log(this.user.nome);
   }
