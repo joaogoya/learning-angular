@@ -1434,7 +1434,7 @@ aula 82
 	na 83 ela faz varios paranaue p deixar o codigo menor, mas é mais neocio fazer
 	o form da aula 82 p é maior, tem mais campos
 
-	com mais campos da p praticar mais i refactoring
+	com mais campos da p praticar mais o refactoring
 
 
 
