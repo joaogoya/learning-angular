@@ -7,13 +7,15 @@ import { AlertModule } from 'ngx-bootstrap';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ListarComponent } from './listar/listar.component';
 import { HomeComponent } from './home/home.component';
+import { CadastrarRefatoradoComponent } from './cadastrar-refatorado/cadastrar-refatorado.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastrarComponent,
     ListarComponent,
-    HomeComponent
+    HomeComponent,
+    CadastrarRefatoradoComponent
   ],
   imports: [
     BrowserModule,

@@ -1412,13 +1412,29 @@ aula 79
 =========
 	mostrando mensagem de erro p usuario
 
-	
+===============================================================================
+aula 80
+=========	
+	desabilitar o bt submit caso o form seja invalido
 
 
+===============================================================================
+aula 81
+=========
+	utilizar o json e umas tags <pre> pra debugar a aplicaão na tela
+	prefiro debugar no console
 
+===============================================================================
+aula 82
+=========
 
+	leiautar form com o bootstrap
+	fica poluido com tdas as validações, na aula 83 ela ensina a validar melhor
 
+	na 83 ela faz varios paranaue p deixar o codigo menor, mas é mais neocio fazer
+	o form da aula 82 p é maior, tem mais campos
 
+	com mais campos da p praticar mais i refactoring
 
 
 
