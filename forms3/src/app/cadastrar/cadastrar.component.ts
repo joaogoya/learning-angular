@@ -30,4 +30,17 @@ export class CadastrarComponent implements OnInit {
     console.log(this.user.nome);
   }
 
+  private testaCampoValido(campo) {
+    return campo.valid && campo.touched;
+  }
+
+  public aplicaCssFeedback(campo) {
+    if (campo.touched){
+      return {
+        'has-error': !this.testaCampoValido(campo),
+        'has-success': this.testaCampoValido(campo),
+        'has-feedback': campo.touched,
+      }
+    }
+  }
 }
