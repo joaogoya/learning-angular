@@ -1,6 +1,4 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
+
       <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form-horizontal">
 
         <div class="form-group" [ngClass]="aplicaCssFeedback(nome)">
@@ -10,11 +8,8 @@
           <div class="col-sm-12">
             <input type="text" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Nome aqui" name="nome" [ngModel]="user.nome"
               required #nome="ngModel">
-            <span *ngIf="nome.valid && nome.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
-            <span *ngIf="!nome.valid && nome.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
-            <small id="nomeHelp" *ngIf="!nome.valid && nome.touched" class="form-text text-muted text-danger">
-              Informe o nome completo
-            </small>
+            <app-campo-control [campo]=nome [mostrarControle]="testaCampoValido(nome)" msgErro="Informe um nome Válido">
+            </app-campo-control>
           </div>
         </div>
 
@@ -25,10 +20,8 @@
           <div class="col-sm-12">
             <input type="email" class="form-control" aria-describedby="emailHelp" id="email" placeholder="Email aqui" name="email" [ngModel]="user.email"
               email required #email="ngModel">
-            <span *ngIf="email.valid && email.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
-            <span *ngIf="!email.valid && email.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
-            <small *ngIf="!email.valid && email.touched" id="emailHelp" class="form-text text-muted text-danger">Informe um email válido
-            </small>
+            <app-campo-control [campo]=email [mostrarControle]="testaCampoValido(nome)" msgErro="Informe um email Válido">
+            </app-campo-control>
           </div>
         </div>
 
@@ -38,36 +31,28 @@
             <label for="cep" class="control-label">Cep</label>
             <input type="text" class="form-control" aria-describedby="cepHelp" id="cep" placeholder="Cep aqui" name="Cep" [ngModel]="user.cep"
               required #cep="ngModel">
-            <span *ngIf="cep.valid && cep.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
-            <span *ngIf="!cep.valid && cep.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
-            <small *ngIf="!cep.valid && cep.touched" id="cepHelp" class="form-text text-muted text-danger">
-              Informe um cep válido
-            </small>
+            <app-campo-control [campo]=cep [mostrarControle]="testaCampoValido(nome)" msgErro="Informe um cep Válido">
+            </app-campo-control>
           </div>
 
           <div class="col-sm-4" [ngClass]="aplicaCssFeedback(numero)">
             <label for="numero" class="control-label">Numero</label>
             <input type="number" class="form-control" aria-describedby="numeroHelp" id="numero" placeholder="numero aqui" name="numero"
               [ngModel]="user.numero" required #numero="ngModel">
-            <span *ngIf="numero.valid && numero.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
-            <span *ngIf="!numero.valid && numero.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
-            <small *ngIf="!numero.valid && numero.touched" id="numeroHelp" class="form-text text-muted text-danger">
-              Informe um numero válido
-            </small>
+            <app-campo-control [campo]=numero [mostrarControle]="testaCampoValido(nome)" msgErro="Informe um numero Válido">
+            </app-campo-control>
           </div>
 
           <div class="col-sm-4" [ngClass]="aplicaCssFeedback(complemento)">
             <label for="complemento" class="control-label">Complemento</label>
             <input type="number" class="form-control" aria-describedby="complementoHelp" id="complemento" placeholder="complemento aqui"
               name="complemento" [ngModel]="user.complemento" required #complemento="ngModel">
-            <span *ngIf="complemento.valid && complemento.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
-            <span *ngIf="!complemento.valid && complemento.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
-            <small *ngIf="!complemento.valid && complemento.touched" id="complementoHelp" class="form-text text-muted text-danger">
-              Informe um complemento válido
-            </small>
+            <app-campo-control [campo]=complemento [mostrarControle]="testaCampoValido(nome)" msgErro="Informe um complemento Válido">
+            </app-campo-control>
           </div>
 
-        </div><!-- formgroup -->
+        </div>
+        <!-- formgroup -->
 
         <div class="form-group" [ngClass]="aplicaCssFeedback(rua)">
           <div class="col-sm-12">
@@ -76,14 +61,10 @@
           <div class="col-sm-12">
             <input type="text" class="form-control" id="rua" aria-describedby="ruaHelp" placeholder="rua aqui" name="rua" [ngModel]="user.rua"
               required #rua="ngModel">
-            <span *ngIf="rua.valid && rua.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
-            <span *ngIf="!rua.valid && rua.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
-            <small id="ruaHelp" *ngIf="!rua.valid && rua.touched" class="form-text text-muted text-danger">
-              Informe o rua completo
-            </small>
+            <app-campo-control [campo]=rua [mostrarControle]="testaCampoValido(nome)" msgErro="Informe um rua Válido">
+            </app-campo-control>
           </div>
         </div>
-
 
         <div class="form-group">
 
@@ -91,37 +72,29 @@
             <label for="bairro" class="control-label">bairro</label>
             <input type="text" class="form-control" aria-describedby="bairroHelp" id="bairro" placeholder="bairro aqui" name="bairro"
               [ngModel]="user.bairro" required #bairro="ngModel">
-            <span *ngIf="bairro.valid && bairro.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
-            <span *ngIf="!bairro.valid && bairro.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
-            <small *ngIf="!bairro.valid && bairro.touched" id="bairroHelp" class="form-text text-muted text-danger">
-              Informe um bairro válido
-            </small>
+            <app-campo-control [campo]=bairro [mostrarControle]="testaCampoValido(nome)" msgErro="Informe um bairro Válido">
+            </app-campo-control>
           </div>
 
           <div class="col-sm-4" [ngClass]="aplicaCssFeedback(cidade)">
             <label for="cidade" class="control-label">cidade</label>
             <input type="text" class="form-control" aria-describedby="cidadeHelp" id="cidade" placeholder="cidade aqui" name="cidade"
               [ngModel]="user.cidade" required #cidade="ngModel">
-            <span *ngIf="cidade.valid && cidade.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
-            <span *ngIf="!cidade.valid && cidade.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
-            <small *ngIf="!cidade.valid && cidade.touched" id="cidadeHelp" class="form-text text-muted text-danger">
-              Informe um cidade válido
-            </small>
+            <app-campo-control [campo]=cidade [mostrarControle]="testaCampoValido(nome)" msgErro="Informe um cidade Válido">
+            </app-campo-control>
           </div>
 
           <div class="col-sm-4" [ngClass]="aplicaCssFeedback(estado)">
             <label for="estado" class="control-label">estado</label>
             <input type="text" class="form-control" aria-describedby="estadoHelp" id="estado" placeholder="estado aqui" name="estado"
               [ngModel]="user.estado" required #estado="ngModel">
-            <span *ngIf="estado.valid && estado.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
-            <span *ngIf="!estado.valid && estado.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
-            <small *ngIf="!estado.valid && estado.touched" id="estadoHelp" class="form-text text-muted text-danger">
-              Informe um estado válido
-            </small>
+            <app-campo-control [campo]=estado [mostrarControle]="testaCampoValido(nome)" msgErro="Informe um estado Válido">
+            </app-campo-control>
           </div>
 
 
-        </div><!-- form group -->
+        </div>
+        <!-- form group -->
 
         <div class="form-group">
           <div class="col-sm-12">
@@ -129,9 +102,4 @@
           </div>
         </div>
       </form>
-    </div>
-    <div class="col-md-4">
-      <app-form-debug [form]="f"></app-form-debug>
-    </div>
-  </div>
-</div>
+    

@@ -35,7 +35,7 @@ export class CadastrarComponent implements OnInit {
   }
 
   public aplicaCssFeedback(campo) {
-    if (campo.touched){
+    if (campo.touched) {
       return {
         'has-error': !this.testaCampoValido(campo),
         'has-success': this.testaCampoValido(campo),

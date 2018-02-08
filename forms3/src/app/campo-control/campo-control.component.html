@@ -1,0 +1,9 @@
+<div *ngIf="campoTouched()">
+  <span *ngIf="mostrarControle" class="glyphicon glyphicon-ok form-control-feedback"></span>
+  <div *ngIf="!mostrarControle">
+    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+    <small id="nomeHelp" class="form-text text-muted text-danger">
+      {{ msgErro }}
+    </small>
+  </div>
+</div>

@@ -9,6 +9,7 @@ import { ListarComponent } from './listar/listar.component';
 import { HomeComponent } from './home/home.component';
 import { CadastrarRefatoradoComponent } from './cadastrar-refatorado/cadastrar-refatorado.component';
 import { FormDebugComponent } from './form-debug/form-debug.component';
+import { CampoControlComponent } from './campo-control/campo-control.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormDebugComponent } from './form-debug/form-debug.component';
     ListarComponent,
     HomeComponent,
     CadastrarRefatoradoComponent,
-    FormDebugComponent
+    FormDebugComponent,
+    CampoControlComponent
   ],
   imports: [
     BrowserModule,
