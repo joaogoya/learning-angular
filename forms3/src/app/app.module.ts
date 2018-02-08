@@ -8,6 +8,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ListarComponent } from './listar/listar.component';
 import { HomeComponent } from './home/home.component';
 import { CadastrarRefatoradoComponent } from './cadastrar-refatorado/cadastrar-refatorado.component';
+import { FormDebugComponent } from './form-debug/form-debug.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CadastrarRefatoradoComponent } from './cadastrar-refatorado/cadastrar-r
     CadastrarComponent,
     ListarComponent,
     HomeComponent,
-    CadastrarRefatoradoComponent
+    CadastrarRefatoradoComponent,
+    FormDebugComponent
   ],
   imports: [
     BrowserModule,
