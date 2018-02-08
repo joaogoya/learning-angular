@@ -1,10 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <div class="jumbotron">
-        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-          <div class="form-group has-feedback" [class.has-error]="!nome.valid && nome.touched" [class.has-success]="nome.valid && nome.touched">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form-horizontal">
+
+        <div class="form-group has-feedback" [class.has-error]="!nome.valid && nome.touched" [class.has-success]="nome.valid && nome.touched">
+          <div class="col-sm-12">
             <label for="nome" class="control-label">Nome</label>
+          </div>
+          <div class="col-sm-12">
             <input type="text" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Nome aqui" name="nome" [ngModel]="user.nome"
               required #nome="ngModel">
             <span *ngIf="nome.valid && nome.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
@@ -13,17 +16,119 @@
               Informe o nome completo
             </small>
           </div>
-          <div class="form-group has-feedback" [class.has-error]="!email.valid && email.touched" [class.has-success]="email.valid && email.touched">
+        </div>
+
+        <div class="form-group has-feedback" [class.has-error]="!email.valid && email.touched" [class.has-success]="email.valid && email.touched">
+          <div class="col-sm-12">
             <label for="email" class="control-label">Password</label>
+          </div>
+          <div class="col-sm-12">
             <input type="email" class="form-control" aria-describedby="emailHelp" id="email" placeholder="Email aqui" name="email" [ngModel]="user.email"
               email required #email="ngModel">
             <span *ngIf="email.valid && email.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
             <span *ngIf="!email.valid && email.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
-            <small *ngIf="!email.valid && email.touched" id="emailHelp" class="form-text text-muted text-danger">Informe um email válido</small>
+            <small *ngIf="!email.valid && email.touched" id="emailHelp" class="form-text text-muted text-danger">Informe um email válido
+            </small>
           </div>
-          <button [disabled]="!f.valid" type="submit" class="btn btn-default">Submit</button>
-        </form>
-      </div>
+        </div>
+
+        <div class="form-group">
+
+          <div class="col-sm-4 has-feedback" [class.has-error]="!cep.valid && cep.touched" [class.has-success]="cep.valid && cep.touched">
+            <label for="cep" class="control-label">Cep</label>
+            <input type="text" class="form-control" aria-describedby="cepHelp" id="cep" placeholder="Cep aqui" name="Cep" [ngModel]="user.cep"
+              required #cep="ngModel">
+            <span *ngIf="cep.valid && cep.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            <span *ngIf="!cep.valid && cep.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            <small *ngIf="!cep.valid && cep.touched" id="cepHelp" class="form-text text-muted text-danger">
+              Informe um cep válido
+            </small>
+          </div>
+
+          <div class="col-sm-4 has-feedback" [class.has-error]="!numero.valid && numero.touched" [class.has-success]="numero.valid && numero.touched">
+            <label for="numero" class="control-label">Numero</label>
+            <input type="number" class="form-control" aria-describedby="numeroHelp" id="numero" placeholder="numero aqui" name="numero"
+              [ngModel]="user.numero" required #numero="ngModel">
+            <span *ngIf="numero.valid && numero.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            <span *ngIf="!numero.valid && numero.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            <small *ngIf="!numero.valid && numero.touched" id="numeroHelp" class="form-text text-muted text-danger">
+              Informe um numero válido
+            </small>
+          </div>
+
+          <div class="col-sm-4 has-feedback" [class.has-error]="!complemento.valid && complemento.touched" [class.has-success]="complemento.valid && complemento.touched">
+            <label for="complemento" class="control-label">Complemento</label>
+            <input type="number" class="form-control" aria-describedby="complementoHelp" id="complemento" placeholder="complemento aqui"
+              name="complemento" [ngModel]="user.complemento" required #complemento="ngModel">
+            <span *ngIf="complemento.valid && complemento.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            <span *ngIf="!complemento.valid && complemento.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            <small *ngIf="!complemento.valid && complemento.touched" id="complementoHelp" class="form-text text-muted text-danger">
+              Informe um complemento válido
+            </small>
+          </div>
+
+        </div><!-- formgroup -->
+
+        <div class="form-group has-feedback" [class.has-error]="!rua.valid && rua.touched" [class.has-success]="rua.valid && rua.touched">
+          <div class="col-sm-12">
+            <label for="rua" class="control-label">rua</label>
+          </div>
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="rua" aria-describedby="ruaHelp" placeholder="rua aqui" name="rua" [ngModel]="user.rua"
+              required #rua="ngModel">
+            <span *ngIf="rua.valid && rua.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            <span *ngIf="!rua.valid && rua.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            <small id="ruaHelp" *ngIf="!rua.valid && rua.touched" class="form-text text-muted text-danger">
+              Informe o rua completo
+            </small>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+
+          <div class="col-sm-4 has-feedback" [class.has-error]="!bairro.valid && bairro.touched" [class.has-success]="bairro.valid && bairro.touched">
+            <label for="bairro" class="control-label">bairro</label>
+            <input type="text" class="form-control" aria-describedby="bairroHelp" id="bairro" placeholder="bairro aqui" name="bairro"
+              [ngModel]="user.bairro" required #bairro="ngModel">
+            <span *ngIf="bairro.valid && bairro.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            <span *ngIf="!bairro.valid && bairro.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            <small *ngIf="!bairro.valid && bairro.touched" id="bairroHelp" class="form-text text-muted text-danger">
+              Informe um bairro válido
+            </small>
+          </div>
+
+          <div class="col-sm-4 has-feedback" [class.has-error]="!cidade.valid && cidade.touched" [class.has-success]="cidade.valid && cidade.touched">
+            <label for="cidade" class="control-label">cidade</label>
+            <input type="text" class="form-control" aria-describedby="cidadeHelp" id="cidade" placeholder="cidade aqui" name="cidade"
+              [ngModel]="user.cidade" required #cidade="ngModel">
+            <span *ngIf="cidade.valid && cidade.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            <span *ngIf="!cidade.valid && cidade.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            <small *ngIf="!cidade.valid && cidade.touched" id="cidadeHelp" class="form-text text-muted text-danger">
+              Informe um cidade válido
+            </small>
+          </div>
+
+          <div class="col-sm-4 has-feedback" [class.has-error]="!estado.valid && estado.touched" [class.has-success]="estado.valid && estado.touched">
+            <label for="estado" class="control-label">estado</label>
+            <input type="text" class="form-control" aria-describedby="estadoHelp" id="estado" placeholder="estado aqui" name="estado"
+              [ngModel]="user.estado" required #estado="ngModel">
+            <span *ngIf="estado.valid && estado.touched" class="glyphicon glyphicon-ok form-control-feedback"></span>
+            <span *ngIf="!estado.valid && estado.touched" class="glyphicon glyphicon-remove form-control-feedback"></span>
+            <small *ngIf="!estado.valid && estado.touched" id="estadoHelp" class="form-text text-muted text-danger">
+              Informe um estado válido
+            </small>
+          </div>
+
+
+        </div><!-- form group -->
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
     </div>
     <div class="col-md-4">
       <app-form-debug [form]="f"></app-form-debug>

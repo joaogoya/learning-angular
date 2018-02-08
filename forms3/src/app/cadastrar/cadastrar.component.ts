@@ -14,6 +14,13 @@ export class CadastrarComponent implements OnInit {
   constructor() {
     this.user.nome = 'joao';
     this.user.email = 'a@b.com';
+    this.user.cep = '91720-090';
+    this.user.numero = 737;
+    this.user.complemento = 118;
+    this.user.rua = 'Carvalho de Freitas';
+    this.user.bairro = 'Teresópolis';
+    this.user.cidade = 'Porto Alegre';
+    this.user.estado = 'RS';
   }
 
   ngOnInit() {}
