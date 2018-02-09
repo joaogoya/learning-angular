@@ -12,23 +12,14 @@ export class CadastrarComponent implements OnInit {
 
   private user: User = new User;
 
-  constructor(private http: Http) {
-    this.user.nome = 'joao';
-    this.user.email = 'a@b.com';
-    this.user.cep = '91720-090';
-    this.user.numero = 737;
-    this.user.complemento = 118;
-    this.user.rua = 'Carvalho de Freitas';
-    this.user.bairro = 'Teresópolis';
-    this.user.cidade = 'Porto Alegre';
-    this.user.estado = 'RS';
-  }
+  constructor(private http: Http) {}
 
   ngOnInit() {}
 
   onSubmit(form) {
-    console.log(form);
-    console.log(this.user.nome);
+    this.http.post('https://httpbin.org/post', JSON.stringify(form.value))
+    .map(t => t)
+    .subscribe(s => console.log(s));
   }
 
   private testaCampoValido(campo) {
@@ -45,21 +36,33 @@ export class CadastrarComponent implements OnInit {
     }
   }
 
-  public buscaCep(event: any) {
+  public buscaCep(event: any, form: any) {
     const cep = event.replace(/\D/g, '');
-    console.log(cep);
     const validacep = /^[0-9]{8}$/;
     if (validacep.test(cep)) {
       this.http.get('//viacep.com.br/ws/' + cep + '/json')
       .map(data => data.json())
       .subscribe(dadosCep => {
-        console.log(dadosCep);
-        this.user.cidade = dadosCep.localidade;
-        console.log(this.user.cidade);
-        this.user.bairro = dadosCep.bairro;
-        this.user.rua = dadosCep.logradouro;
+        this.populaDadosForm(dadosCep, form);
       });
     }
   }
+  private populaDadosForm(dados: any, formulario: any) {
+    console.log('fomr no set values');
+    console.log(formulario.value.enderecoInfos);
+  /*   formulario.setValue({
+      nome: formulario.value.nome,
+      email: formulario.value.email,
+    }); */
 
+    formulario.form.patchValue({
+      enderecoInfos: {
+        Cep: dados.cep,
+        rua: dados.logradouro,
+        bairro: dados.bairro,
+        cidade: dados.localidade,
+        estado: dados.uf
+      }
+    });
+  }
 }

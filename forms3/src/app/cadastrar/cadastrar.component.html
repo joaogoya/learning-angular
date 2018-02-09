@@ -32,12 +32,11 @@
 
             <div class="col-sm-4" [ngClass]="aplicaCssFeedback(cep)">
               <label for="cep" class="control-label">Cep</label>
-              <input type="text" class="form-control" aria-describedby="cepHelp" id="cep" placeholder="Cep aqui" name="Cep" [ngModel]="user.cep"
-                required #cep="ngModel" (blur)="buscaCep($event.target.value)">
+              <input type="text" class="form-control" aria-describedby="cepHelp" id="cep" placeholder="Cep aqui" name="Cep" [ngModel]="user.cep" required #cep="ngModel" (blur)="buscaCep($event.target.value, f)">
               <app-campo-control [campo]=cep [mostrarControle]="testaCampoValido(cep)" msgErro="Informe um cep Válido">
               </app-campo-control>
             </div>
-  
+
             <div class="col-sm-4" [ngClass]="aplicaCssFeedback(numero)">
               <label for="numero" class="control-label">Numero</label>
               <input type="number" class="form-control" aria-describedby="numeroHelp" id="numero" placeholder="numero aqui" name="numero"
@@ -45,7 +44,7 @@
               <app-campo-control [campo]=numero [mostrarControle]="testaCampoValido(numero)" msgErro="Informe um numero Válido">
               </app-campo-control>
             </div>
-  
+
             <div class="col-sm-4" [ngClass]="aplicaCssFeedback(complemento)">
               <label for="complemento" class="control-label">Complemento</label>
               <input type="number" class="form-control" aria-describedby="complementoHelp" id="complemento" placeholder="complemento aqui"
@@ -53,24 +52,24 @@
               <app-campo-control [campo]=complemento [mostrarControle]="testaCampoValido(complemento)" msgErro="Informe um complemento Válido">
               </app-campo-control>
             </div>
-  
+
           </div>
           <!-- formgroup -->
-  
+
           <div class="form-group" [ngClass]="aplicaCssFeedback(rua)">
             <div class="col-sm-12">
               <label for="rua" class="control-label">rua</label>
             </div>
             <div class="col-sm-12">
-              <input type="text" class="form-control" id="rua" aria-describedby="ruaHelp" placeholder="rua aqui" name="rua" [ngModel]="user.rua"
+              <input type="text" class="form-control" id="rua" aria-describedby="ruaHelp" placeholder="rua aqui" name="rua" [ngModel]="user.rua"ngModel
                 required #rua="ngModel">
               <app-campo-control [campo]=rua [mostrarControle]="testaCampoValido(rua)" msgErro="Informe um rua Válido">
               </app-campo-control>
             </div>
           </div>
-  
+
           <div class="form-group">
-  
+
             <div class="col-sm-4" [ngClass]="aplicaCssFeedback(bairro)">
               <label for="bairro" class="control-label">bairro</label>
               <input type="text" class="form-control" aria-describedby="bairroHelp" id="bairro" placeholder="bairro aqui" name="bairro"
@@ -78,7 +77,7 @@
               <app-campo-control [campo]=bairro [mostrarControle]="testaCampoValido(bairro)" msgErro="Informe um bairro Válido">
               </app-campo-control>
             </div>
-  
+
             <div class="col-sm-4" [ngClass]="aplicaCssFeedback(cidade)">
               <label for="cidade" class="control-label">cidade</label>
               <input type="text" class="form-control" aria-describedby="cidadeHelp" id="cidade" placeholder="cidade aqui" name="cidade"
@@ -87,7 +86,7 @@
               <app-campo-control [campo]=cidade [mostrarControle]="testaCampoValido(cidade)" msgErro="Informe um cidade Válido">
               </app-campo-control>
             </div>
-  
+
             <div class="col-sm-4" [ngClass]="aplicaCssFeedback(estado)">
               <label for="estado" class="control-label">estado</label>
               <input type="text" class="form-control" aria-describedby="estadoHelp" id="estado" placeholder="estado aqui" name="estado"
@@ -95,8 +94,8 @@
               <app-campo-control [campo]=estado [mostrarControle]="testaCampoValido(estado)" msgErro="Informe um estado Válido">
               </app-campo-control>
             </div>
-  
-  
+
+
           </div>
           <!-- form group -->
         </div>
@@ -115,8 +114,8 @@
     </div>
   </div>
 </div>
-      
 
 
-      
-    
+
+
+
