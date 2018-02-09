@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CadastrarRefatoradoComponent } from './cadastrar-refatorado/cadastrar-refatorado.component';
 import { FormDebugComponent } from './form-debug/form-debug.component';
 import { CampoControlComponent } from './campo-control/campo-control.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CampoControlComponent } from './campo-control/campo-control.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

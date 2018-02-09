@@ -1,6 +1,7 @@
 import { Usuario } from './../../../../rotas/src/app/login/usuario';
 import { Component, OnInit } from '@angular/core';
 import { User } from './user';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-cadastrar',
@@ -11,7 +12,7 @@ export class CadastrarComponent implements OnInit {
 
   private user: User = new User;
 
-  constructor() {
+  constructor(private http: Http) {
     this.user.nome = 'joao';
     this.user.email = 'a@b.com';
     this.user.cep = '91720-090';
@@ -43,4 +44,22 @@ export class CadastrarComponent implements OnInit {
       }
     }
   }
+
+  public buscaCep(event: any) {
+    const cep = event.replace(/\D/g, '');
+    console.log(cep);
+    const validacep = /^[0-9]{8}$/;
+    if (validacep.test(cep)) {
+      this.http.get('//viacep.com.br/ws/' + cep + '/json')
+      .map(data => data.json())
+      .subscribe(dadosCep => {
+        console.log(dadosCep);
+        this.user.cidade = dadosCep.localidade;
+        console.log(this.user.cidade);
+        this.user.bairro = dadosCep.bairro;
+        this.user.rua = dadosCep.logradouro;
+      });
+    }
+  }
+
 }
