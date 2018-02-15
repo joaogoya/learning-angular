@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Http } from '@angular/http';
 
 @Component({
@@ -23,8 +23,8 @@ export class CadastrarRefatoradoComponent implements OnInit {
     }); */
 
     this.form = this.formBuilder.group({
-      nome: [null],
-      email: [null]
+      nome: [null, Validators.required],
+      email: [null, [Validators.required, Validators.email]]
     });
   }
 
@@ -42,6 +42,24 @@ export class CadastrarRefatoradoComponent implements OnInit {
   resetFrom() {
     console.log('reset');
     this.form.reset();
+  }
+
+  public campoTouched(campo) {
+    return this.form.get(campo).touched;
+  }
+
+  private testaCampoValido(campo) {
+    return this.form.get(campo).valid && this.campoTouched(campo);
+  }
+
+  public aplicaCssFeedback(campo) {
+    if (this.campoTouched(campo)) {
+      return {
+        'has-error': !this.testaCampoValido(campo),
+        'has-success': this.testaCampoValido(campo),
+        'has-feedback': this.form.get(campo).touched,
+      };
+    }
   }
 
 

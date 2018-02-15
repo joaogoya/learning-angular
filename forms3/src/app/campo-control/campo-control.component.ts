@@ -16,6 +16,7 @@ export class CampoControlComponent implements OnInit {
   ngOnInit() {}
 
   campoTouched() {
-    return this.campo.touched;
+    // return this.campo.touched;
+    return this.campo;
   }
 }

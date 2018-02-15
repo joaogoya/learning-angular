@@ -32,7 +32,7 @@ export class CadastrarComponent implements OnInit {
         'has-error': !this.testaCampoValido(campo),
         'has-success': this.testaCampoValido(campo),
         'has-feedback': campo.touched,
-      }
+      };
     }
   }
 
