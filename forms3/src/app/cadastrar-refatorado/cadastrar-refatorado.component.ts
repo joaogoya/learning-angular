@@ -17,45 +17,30 @@ export class CadastrarRefatoradoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    /* this.form = new FormGroup({
-      nome: new FormControl(null),
-      email: new FormGroup(null),
-    }); */
-
     this.form = this.formBuilder.group({
       nome: [null, Validators.required],
       email: [null, [Validators.required, Validators.email]],
-      cep: [null, Validators.required],
-      numero: [null, Validators.required],
-      complemento: [null, Validators.required],
-      rua: [null, Validators.required],
-      bairro: [null, Validators.required],
-      cidade: [null, Validators.required],
-      estado: [null, Validators.required]
+      endereco: this.formBuilder.group({
+        cep: [null, Validators.required],
+        numero: [null, Validators.required],
+        complemento: [null, Validators.required],
+        rua: [null, Validators.required],
+        bairro: [null, Validators.required],
+        cidade: [null, Validators.required],
+        estado: [null, Validators.required]
+      })
     });
   }
 
-  onSubmit(form) {
-    this.http.post('https://httpbin.org/post', JSON.stringify(this.form.value))
-    .map(response => response)
-    .subscribe(dadosRetornados => {
-      console.log(dadosRetornados);
-      this.resetFrom();
-    },
-    (error: any) => alert('erro')
-  );
-  }
-
-  resetFrom() {
-    console.log('reset');
+  private resetFrom() {
     this.form.reset();
   }
 
-  public campoTouched(campo) {
+  private campoTouched(campo) {
     return this.form.get(campo).touched;
   }
 
-  private testaCampoValido(campo) {
+  public testaCampoValido(campo) {
     return this.form.get(campo).valid && this.campoTouched(campo);
   }
 
@@ -69,5 +54,58 @@ export class CadastrarRefatoradoComponent implements OnInit {
     }
   }
 
+  public buscaCep() {
+    let cep = this.form.get('endereco.cep').value;
 
+     cep = cep.replace(/\D/g, '');
+
+    const validacep = /^[0-9]{8}$/;
+    if (validacep.test(cep)) {
+      this.http.get('//viacep.com.br/ws/' + cep + '/json')
+        .map(data => data.json())
+        .subscribe(dadosCep => {
+          this.populaDadosForm(dadosCep);
+        });
+    }
+  }
+
+  private populaDadosForm(dados: any) {
+    this.form.patchValue({
+      endereco: {
+        Cep: dados.cep,
+        rua: dados.logradouro,
+        bairro: dados.bairro,
+        cidade: dados.localidade,
+        estado: dados.uf
+      }
+    });
+  }
+
+  public onSubmit(form) {
+    if (this.form.valid) {
+      this.http.post('https://httpbin.org/post', JSON.stringify(this.form.value))
+      .map(response => response)
+      .subscribe(
+        dadosRetornados => {
+          this.resetFrom();
+        },
+        (error: any) => console.log('erro')
+      );
+    } else {
+      console.log('formulario invalido');
+     this.verificaCamposValidos(this.form);
+    }
+
+
+  }
+
+  private verificaCamposValidos(grupoCampos: FormGroup) {
+    Object.keys(grupoCampos.controls).forEach( controle => {
+      const campo = grupoCampos.get(controle);
+      campo.markAsTouched();
+      if (campo instanceof FormGroup) {
+        this.verificaCamposValidos(campo);
+      }
+    });
+  }
 }
