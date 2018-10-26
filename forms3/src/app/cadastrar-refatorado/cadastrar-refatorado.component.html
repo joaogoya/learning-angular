@@ -1,0 +1,110 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <form class="form-horizontal" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <div class="form-group" [ngClass]="aplicaCssFeedback('nome')">
+          <div class="col-sm-12">
+            <label for="nome" class="control-label">Nome</label>
+          </div>
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="nome" placeholder="Nome aqui" formControlName="nome" name="nome">
+            <app-campo-control [campo]="campoTouched('nome')" [mostrarControle]="testaCampoValido('nome')" msgErro="Informe um nome Válido">
+            </app-campo-control>
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="aplicaCssFeedback('email')">
+          <div class="col-sm-12">
+            <label for="email" class="control-label">Password</label>
+          </div>
+          <div class="col-sm-12">
+            <input type="email" class="form-control" id="email" formControlName="email" placeholder="Email aqui" name="email">
+            <app-campo-control [campo]="campoTouched('email')" [mostrarControle]="testaCampoValido('email')" msgErro="Informe um nome Válido">
+            </app-campo-control>
+          </div>
+        </div>
+
+        <div formGroupName="endereco">
+          <div class="form-group">
+            
+            <div class="col-sm-4" [ngClass]="aplicaCssFeedback('endereco.cep')">
+              <label for="cep" class="control-label">Cep</label>
+              <input (blur)="buscaCep()" type="text" formControlName="cep" class="form-control" aria-describedby="cepHelp" id="cep" placeholder="Cep aqui"
+                name="Cep">
+              <app-campo-control [campo]="campoTouched('endereco.cep')" [mostrarControle]="testaCampoValido('endereco.cep')" msgErro="Informe um cep Válido">
+              </app-campo-control>
+            </div>
+
+            <div class="col-sm-4" [ngClass]="aplicaCssFeedback('endereco.numero')">
+              <label for="numero" class="control-label">Numero</label>
+              <input type="number" class="form-control" formControlName="numero" aria-describedby="numeroHelp" id="numero" placeholder="numero aqui"
+                name="numero">
+              <app-campo-control [campo]="campoTouched('endereco.numero')" [mostrarControle]="testaCampoValido('endereco.numero')" msgErro="Informe um numero Válido">
+              </app-campo-control>
+            </div>
+
+            <div class="col-sm-4" [ngClass]="aplicaCssFeedback('endereco.complemento')">
+              <label for="complemento" class="control-label">Complemento</label>
+              <input type="number" class="form-control" formControlName="complemento" aria-describedby="complementoHelp" id="complemento"
+                placeholder="complemento aqui" name="complemento">
+              <app-campo-control [campo]="campoTouched('endereco.complemento')" [mostrarControle]="testaCampoValido('endereco.complemento')" msgErro="Informe um complemento Válido">
+              </app-campo-control>
+            </div>
+
+          </div>
+
+          <div class="form-group" [ngClass]="aplicaCssFeedback('endereco.rua')">
+            <div class="col-sm-12">
+              <label for="rua" class="control-label">rua</label>
+            </div>
+            <div class="col-sm-12">
+              <input type="text" class="form-control" id="rua" formControlName="rua" aria-describedby="ruaHelp" placeholder="rua aqui"
+                name="rua">
+              <app-campo-control [campo]="campoTouched('endereco.rua')" [mostrarControle]="testaCampoValido('endereco.rua')" msgErro="Informe um rua Válido">
+              </app-campo-control>
+            </div>
+          </div>
+
+          <div class="form-group">
+
+            <div class="col-sm-4" [ngClass]="aplicaCssFeedback('endereco.bairro')">
+              <label for="bairro" class="control-label">bairro</label>
+              <input type="text" class="form-control" formControlName="bairro" aria-describedby="bairroHelp" id="bairro" placeholder="bairro aqui"
+                name="bairro">
+              <app-campo-control [campo]="campoTouched('endereco.bairro')" [mostrarControle]="testaCampoValido('endereco.bairro')" msgErro="Informe um bairro Válido">
+              </app-campo-control>
+            </div>
+
+            <div class="col-sm-4" [ngClass]="aplicaCssFeedback('endereco.cidade')">
+              <label for="cidade" class="control-label">cidade</label>
+              <input type="text" class="form-control" formControlName="cidade" aria-describedby="cidadeHelp" id="cidade" placeholder="cidade aqui"
+                name="cidade">
+              <app-campo-control [campo]="campoTouched('endereco.cidade')" [mostrarControle]="testaCampoValido('endereco.cidade')" msgErro="Informe um cidade Válido">
+              </app-campo-control>
+            </div>
+
+            <div class="col-sm-4" [ngClass]="aplicaCssFeedback('endereco.estado')">
+              <label for="estado" class="control-label">estado</label>
+              <input type="text" class="form-control" formControlName="estado" aria-describedby="estadoHelp" id="estado" placeholder="estado aqui"
+                name="estado">
+              <app-campo-control [campo]="campoTouched('endereco.estado')" [mostrarControle]="testaCampoValido('endereco.estado')" msgErro="Informe um estado Válido">
+              </app-campo-control>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <button type="submit" class="btn btn-success">Enviar</button>
+            <a role="button" class="btn btn-danger" (click)="resetFrom()">Resetar</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col sm4">
+      <app-form-debug [form]=form></app-form-debug>
+    </div>
+  </div>
+</div>

@@ -368,7 +368,7 @@ FORMULARIOS
 		
 	= aula 58
 	==========
-		ela cria ma pasta curso detalhe, e cri um modulo de funcionalidade p ele
+		ela cria ma pasta curso detalhe, e cria um modulo de funcionalidade p ele
 			
 	= aula 59
 	===========
@@ -401,13 +401,11 @@ FORMULARIOS
 		é o routing e nao mais o modulo que carrega os componentes
 		
 		e para fazer isso existe um extenso passo a passo:
+		
 			
 		
+/api/questionarios/porta 3000		
 		
-		
-
-
-
 
 
 
