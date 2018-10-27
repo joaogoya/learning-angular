@@ -1437,9 +1437,23 @@ aula 82
 	com mais campos da p praticar mais o refactoring
 
 
-	plugin angular language serviceeeeeeeeeeeee
+	plugin angular language service
 
 
+	Da aula 82 até a 100 é form  data driven
+	aula 101 - atualizar pro p angular 6
+
+===============================================================================
+aula 102
+=========	
+	provideIn
+	na classe de servico da p colocar um
+	@injectable({
+		provideIn: root
+	})
+
+	con esse provideIn nao precisamos importar a classe nos .modules
+	é só declarar via construtor
 
 
 
