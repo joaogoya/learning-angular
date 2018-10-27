@@ -1444,7 +1444,7 @@ aula 82
 	aula 101 - atualizar pro p angular 6
 
 ===============================================================================
-aula 102
+aula 101
 =========	
 	provideIn
 	na classe de servico da p colocar um
@@ -1457,7 +1457,7 @@ aula 102
 
 
 ===============================================================================
-aula 103
+aula 102
 =========	
 
 	selectbox estados brasileiros
@@ -1490,17 +1490,83 @@ aula 103
 	****lembrar de desinscrer os subscribes no onDestroy ou começar a trabahar com async
 		mas nao deiar subscribes ativos pqq isso faz rola um memorie leak dos mais 10
 
+===============================================================================
+aula 103
+=========
+	mandar o obj, e nao apenas o id pro banco
+	ngValue
+	comparewwith
 
 
 
+===============================================================================
+aula 104
+=========
+	combobox com multiplos selects
+	ela faz com ngvalue e comparewwith
+
+
+===============================================================================
+aula 105
+=========
+	combobox
+	poe as opções num array
+	no template percorre o array exxibindo as opções, nesse caso o sim ou nao
+
+
+===============================================================================
+aula 106
+=========
+	checkkbox toogle
+	sim ou nao
+	no fformbuilder, qd or trabalhar com checkboxx nao é negocio meter validetors.required
+	pq o valor falso passa pela validdção
+	falso é dierente de nullo, o validators deia passar
+
+	é melhor meter um validators.pattern('true')
 
 
 
+===============================================================================
+aula 107
+=========
+	formArray
+	e marcar varios checkkboes
+
+	public randomArray = ['aaa', 'bbbb', ''ccccc];
+
+	constructor
+	onInit
+
+	setFormbuilder(){
+		for = newFFormGroup({
+			nome:[null, vlidators.required],
+			checkkBoxes: this.arrayFunction();
+		})	
+	}
 
 
+	arrayunction(){
+		const values = this.randomArray.map(value => new FormControl(false***));
+		return this.ormBuilder.array(values);
+	}
+
+	***false pq é um exemplo de checkbox
 
 
+	no template, pra fazer o bind, nao é formControlName direto.
+	Primeiro é formArrayName.
+	<div fformArrayName="checkboxes**"> </div>
+	**checkboxees é o nome dentro do setFormbuilder. É com ele qq se faz o bind
+	e depois faz um for, ficando assim:
+	<div fformArrayName="checkboxes**" ngFor="let item of form.get(checboxes).control"> </div>
+	,lembrando  form é o nome do formulario - <form []="form"></form>
+	usa o indice do for, e por ultimo seta os formControlName
+	fica assim:
 
+	<div fformArrayName="checkboxes**" ngFor="let item of form.get(checboxes).control; let i = index"> 
+		<input type="checkBox" [formControlName]="i">{{checkboxes[i]}}
+	</div>
 
 
 
