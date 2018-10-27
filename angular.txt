@@ -1614,89 +1614,158 @@ aula 111
 				por algum motivo ela importa o .map() do rxjs - import {map} from rxjs/operators
 			*****tap - nao faco a menor ideia, mas era o antigo operador "DO". Tb precisa ser importado - import {map, tap} from rxjs/operators
 		
-		2 - logica p comparar o email do user com a lista de emails vindas do servidor
-			2.1 -  ela faz isso na classe de servico com: 
-				map((value) => {
-					filer(() => {comprara o email com as infos do servidor}) 
-				})
-			*eu prefiro fazer essa logica no componente
+	2 - logica p comparar o email do user com a lista de emails vindas do servidor
+		2.1 -  ela faz isso na classe de servico com: 
+			map((value) => {
+				filer(() => {comprara o email com as infos do servidor}) 
+			})
+		*eu prefiro fazer essa logica no componente
 
-		3 - bind com o template p informar o user se o email existe ou nao
-			3.1 - faz uma function p pegar o resltado do ilter e transformar em um boolean
-				tipo, se o email existe é true, se nao, é false
-			
-			3.2 IMPORTANTE!!
-				no formcontrol temos:
+	3 - bind com o template p informar o user se o email existe ou nao
+		3.1 - faz uma function p pegar o resltado do ilter e transformar em um boolean
+			tipo, se o email existe é true, se nao, é false
+		
+		3.2 IMPORTANTE!!
+			no formcontrol temos:
 
-				this.form = this.formbuilder({
-					email:[null, [array de validações sincronas], [array de validacoes assincronas]]
-				});
+			this.form = this.formbuilder({
+				email:[null, [array de validações sincronas], [array de validacoes assincronas]]
+			});
 
-				Sim, os formcontrol dentro do formbuilder aceitam 3 parametros
-					valor inicial - quase sempre o null
-					validacoes sincronas
-					validacoes assincronas
+			Sim, os formcontrol dentro do formbuilder aceitam 3 parametros
+				valor inicial - quase sempre o null
+				validacoes sincronas
+				validacoes assincronas
 
-				nosso formbuilder fica assim:
-				this.form = this.formbuilder({
-					email:[null, [validators.required], [this.functionQueValidaEmail.bind(this)]],
-				});
+			nosso formbuilder fica assim:
+			this.form = this.formbuilder({
+				email:[null, [validators.required], [this.functionQueValidaEmail.bind(this)]],
+			});
 
-				lembrando que a funcao que valida email tem retornar um boolean.
+			lembrando que a funcao que valida email tem retornar um boolean.
 
-		4 - msg de erro no template
-			4.1 qd ttrabalhamos com validação assincrona, o formControl tem varios status
-				tipo, buscando, validando, emailValido!
-				PENDING: enaunto o ront fala com o back, o status é pending
-				VALID: Valido - passou na validação
+	4 - msg de erro no template
+		4.1 qd ttrabalhamos com validação assincrona, o formControl tem varios status
+			tipo, buscando, validando, emailValido!
+			PENDING: enaunto o ront fala com o back, o status é pending
+			VALID: Valido - passou na validação
 
-				nao é legal exibir pending, ou valid pro usuario. O melhor negocio é fazer uns if
+			nao é legal exibir pending, ou valid pro usuario. O melhor negocio é fazer uns if
 
-			4.1.2 nao tem staatus invalid. pra isso se usa o hasError
-				<input type="email" [smgErro]=form.get('email').hasErroe('');	
+		4.1.2 nao tem staatus invalid. pra isso se usa o hasError
+			<input type="email" [smgErro]=form.get('email').hasErroe('');	
 
-		5 - a cada keyUp a validacao assincrona vai no servidor
-			isso é bom. O negocio é fazer ir uma vez só.
+	5 - a cada keyUp a validacao assincrona vai no servidor
+		isso é bom. O negocio é fazer ir uma vez só.
 
-			na classe de servico, onde tem os opradores do rjxs, importar mais um, o delay()
-			dae, dar um pip(
-				delay(2000)
-				.map()
-				......
-			)
-			tipo um setTimeOut do jq.
-
-
+		na classe de servico, onde tem os opradores do rjxs, importar mais um, o delay()
+		dae, dar um pip(
+			delay(2000)
+			.map()
+			......
+		)
+		tipo um setTimeOut do jq.
 
 
+===============================================================================
+aula 112
+=========
+	validaco dos campos
+	ela cria uma logica dierente pro validaErros(){}
+	faz uma classe, itera os camspo, .....
+	mas a ideia é a mesma
+	qqd o user submeter o form, validar os campos.
+
+===============================================================================
+aula 113
+=========
+	form reativos
+	escutar mudanças no orm e ragir a elas 
+	orm.stausChange(
+		do sonthing
+	)
+
+	da p escutar mudanças no nos controls e nos arrays tb
+
+
+===============================================================================
+aula 114
+=========
+	reutilizar inputs
+	sim
+	os campos sao mt parecidos e tem muito codigo repetido
+		as classes do botstrap por exemplo, validações, ....
+		da pra "reutilizar" os inputs
+
+===============================================================================
+aula 115
+=========
+	classe para forms
+	provavelmente uma continuação da reutilizacao dos inputs
+
+	terminar proj balta
+	colocar componente de erros
+		primeiro o simpes que ela endina no começo dos forms
+	colocar a function de mensagens  ela endsina na 112
+	reaproveira inputs
+	ffazer classe pros forms
+	assistir essas duas com calma
 
 
 
+===============================================================================
+aula 116
+=========
+	select aninhado
+	cidade e estado
 
 
 
+===============================================================================
+aula 117
+=========
+	httpClient - introducao e criacao de um novo proj
+
+
+===============================================================================
+aula 118
+=========
+	instalação do botstrap e do ngx-bootsrap
+	ela tb cria as rotas e os modulos do proj novo
+
+=======================
+novidades angular 6.1
+=======================
+
+===============================================================================
+aula 119
+=========
+	Simulando uma api server side com json-server
+	ela apresenta um modulo do npm que simula um server 
+	é util p simular reponses sem ter que fazer toda uma api
+	bem util - olhar com calma depois
+
+===============================================================================
+aula 120
+=========
+	http GET - com subscribe - bosta
+
+===============================================================================
+aula 121
+=========
+	variavel de embiente para anviroments
+
+===============================================================================
+aula 122
+=========
+	pipe async no template
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+===============================================================================
+aula 123
+=========
+	Unsubscribe automatico
 
 
 
