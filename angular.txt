@@ -1456,6 +1456,40 @@ aula 102
 	é só declarar via construtor
 
 
+===============================================================================
+aula 103
+=========	
+
+	selectbox estados brasileiros
+	mas é interessante por causa do pipe async e da maneira ue ela trata o subscribe
+	
+	o pipe async a faz o unsubscribe
+	o pipe fica no template, onde percorremos o array
+	tipo, nesse caso é um select de estados. O pipe vai no or dos estados
+	let estado of arrayEstados | async
+
+	a function era:
+		public estados: estadoEntiet[];
+		constructor (){}
+		ngOnIint(){}
+		somafunction(){
+			this.service.buscaEstados().subscribe((data) => {
+				this.arrayEstados = data
+			})
+		}
+	
+	ficou assim:
+	public estados: Observable<estadoEntiet[]>;
+	onIint(){
+		this.estados = this.service.buscaEstados();
+	}
+
+	Assim nao precisa fazer o subscribe.
+	Com o async no template e o array sendo um observable, nao precisa mais se insecrever.
+
+	****lembrar de desinscrer os subscribes no onDestroy ou começar a trabahar com async
+		mas nao deiar subscribes ativos pqq isso faz rola um memorie leak dos mais 10
+
 
 
 
