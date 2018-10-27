@@ -1570,6 +1570,111 @@ aula 107
 
 
 
+===============================================================================
+aula 108
+=========
+	Validação customizada
+
+===============================================================================
+aula 109
+=========
+	valida cep
+
+===============================================================================
+aula 110
+=========
+	Validação entre dois campos
+	confirmar email, confirmar senha, ...
+
+
+
+===============================================================================
+aula 111
+=========
+	validação assincrona
+	bate no servidor, espera a resposta
+	com a resposta valida a info que o usuario colocou no campo
+
+	Confirmar e mail, por exemplo.
+	bate no servidor p ver se aquele email ja existe
+
+	1 - classe de servico p bater no servidor passando o email q o user inseriu
+		1.2 - nesse exxemplo ela fez o subscribe. Pelo visto nao da p usar o pipe async
+		1.3 - na classe de servico ela usa os operadores do rxjs p tratar o retorno do servidor
+			randomFunction(email){
+				return this.hhtpClient.get(url dos emails).
+				.pipe**(
+					.map***( email => {email})
+					.tap*****(console,log)
+				)
+			}
+
+			**pipe - nao faço a menor puta ideia de o que é isso
+			*** map - no reponse, vem um monte de coisas no json. Queremos só o email.
+				por algum motivo ela importa o .map() do rxjs - import {map} from rxjs/operators
+			*****tap - nao faco a menor ideia, mas era o antigo operador "DO". Tb precisa ser importado - import {map, tap} from rxjs/operators
+		
+		2 - logica p comparar o email do user com a lista de emails vindas do servidor
+			2.1 -  ela faz isso na classe de servico com: 
+				map((value) => {
+					filer(() => {comprara o email com as infos do servidor}) 
+				})
+			*eu prefiro fazer essa logica no componente
+
+		3 - bind com o template p informar o user se o email existe ou nao
+			3.1 - faz uma function p pegar o resltado do ilter e transformar em um boolean
+				tipo, se o email existe é true, se nao, é false
+			
+			3.2 IMPORTANTE!!
+				no formcontrol temos:
+
+				this.form = this.formbuilder({
+					email:[null, [array de validações sincronas], [array de validacoes assincronas]]
+				});
+
+				Sim, os formcontrol dentro do formbuilder aceitam 3 parametros
+					valor inicial - quase sempre o null
+					validacoes sincronas
+					validacoes assincronas
+
+				nosso formbuilder fica assim:
+				this.form = this.formbuilder({
+					email:[null, [validators.required], [this.functionQueValidaEmail.bind(this)]],
+				});
+
+				lembrando que a funcao que valida email tem retornar um boolean.
+
+		4 - msg de erro no template
+			4.1 qd ttrabalhamos com validação assincrona, o formControl tem varios status
+				tipo, buscando, validando, emailValido!
+				PENDING: enaunto o ront fala com o back, o status é pending
+				VALID: Valido - passou na validação
+
+				nao é legal exibir pending, ou valid pro usuario. O melhor negocio é fazer uns if
+
+			4.1.2 nao tem staatus invalid. pra isso se usa o hasError
+				<input type="email" [smgErro]=form.get('email').hasErroe('');	
+
+		5 - a cada keyUp a validacao assincrona vai no servidor
+			isso é bom. O negocio é fazer ir uma vez só.
+
+			na classe de servico, onde tem os opradores do rjxs, importar mais um, o delay()
+			dae, dar um pip(
+				delay(2000)
+				.map()
+				......
+			)
+			tipo um setTimeOut do jq.
+
+
+
+
+
+
+
+
+
+
 
 
 
